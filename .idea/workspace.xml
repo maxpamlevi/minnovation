@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98408259-74cf-4572-8de2-2bfe4424b327" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/assets/images/porsche.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/minnovation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/minnovation.iml" afterDir="false" />
+    <list default="true" id="98408259-74cf-4572-8de2-2bfe4424b327" name="Default Changelist" comment="update UI">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/stylesheets/application.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/stylesheets/application.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/home/shopping.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/shopping.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/environments/production.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/production.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,8 +170,16 @@
       <updated>1630553621605</updated>
       <workItem from="1630553626336" duration="345000" />
       <workItem from="1631065891247" duration="16000" />
-      <workItem from="1631095794589" duration="6920000" />
+      <workItem from="1631095794589" duration="8193000" />
     </task>
+    <task id="LOCAL-00001" summary="update UI">
+      <created>1631110874537</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1631110874537</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,7 +198,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="update UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="update UI" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/minnovation@Development__minnovation.rcov" NAME="Development: minnovation Coverage Results" MODIFIED="1631095851501" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="minnovation" />

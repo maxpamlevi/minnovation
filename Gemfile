@@ -27,8 +27,12 @@ gem 'jbuilder', '~> 2.7'
 # websocker
 gem 'websocket-rails', github: 'recurser/websocket-rails', branch: 'bugfix/388-latest-faye-websocket'
 
+gem 'rubyXL', '~> 3.4', '>= 3.4.18'
+gem 'interactor', '~> 3.1', '>= 3.1.2'
+gem "interactor-rails", "~> 2.0"
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
+gem 'ransack', '~> 2.4', '>= 2.4.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -1,20 +1,64 @@
-<a href="#" class="product-item">
-  <%= image_tag("product.png") %>
-  <div class="inner-detail-product">
-    <div class="horizontal-row">
-      <div class="circle-green"></div>
-      <p>Taycan Turbo S</p>
+<div class="product-item">
+  <div class="border p-1">
+    <div class='product-image'>
+      <img class="w-100 p-1" src="<%=product.link_img%>" alt="">
     </div>
-    <div class="horizontal-row">
-      <%= image_tag("tag.png") %>
-      <p>Porsche</p>
+    <div class="pt-1">
+      
     </div>
-    <div class="price">
-      <p>$ 420.000</p>
+    <%= link_to '/product', class: 'pt-1 link' do %>
+      <span>
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="6" cy="6" r="6" fill="#00BE65" />
+        </svg>
+      </span>
+      <span><%= product.name %></span>
+    <% end %>
+
+    <%= link_to '/branch', class: 'pt-1 link' do %>
+      <span>
+        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M8.91507 1.83176C8.64946 1.56606 8.28918 1.41675 7.91349 1.41667H2.83332C2.4576 1.41667 2.09727 1.56593 1.83159 1.8316C1.56591 2.09728 1.41666 2.45762 1.41666 2.83334V7.91351C1.41674 8.2892 1.56604 8.64947 1.83174 8.91509L7.49841 14.5818C7.76407 14.8473 8.12434 14.9965 8.49999 14.9965C8.87564 14.9965 9.23591 14.8473 9.50157 14.5818L14.5817 9.50159C14.8473 9.23592 14.9965 8.87565 14.9965 8.5C14.9965 8.12436 14.8473 7.76409 14.5817 7.49842L8.91507 1.83176ZM4.95832 6.375C4.58251 6.37491 4.22212 6.22553 3.95644 5.95972C3.69077 5.69391 3.54156 5.33345 3.54166 4.95763C3.54175 4.58181 3.69113 4.22143 3.95694 3.95575C4.22275 3.69007 4.58321 3.54087 4.95903 3.54096C5.33485 3.54106 5.69524 3.69044 5.96091 3.95625C6.22659 4.22206 6.37579 4.58252 6.3757 4.95834C6.3756 5.33416 6.22622 5.69454 5.96041 5.96022C5.6946 6.2259 5.33414 6.3751 4.95832 6.375Z"
+            fill="#E56353" />
+        </svg>
+      </span>
+      <span>
+        <%= product.vehicle_make %>
+      </span>
+    <% end %> 
+    <% if product.discount > 0 %>
+      <div class="discount mt-1">
+        <span class="text-right pt-2 discount-price mr-4" style="text-align: right">
+          <%= number_to_currency(product.price, precision: 0) %>
+        </span>
+        <div class="discount-task">
+          <span>-<%=product.discount%>%</span>
+        </div>
+      </div>
+    <% end %>
+    
+    <div class="rating-price pt-2 pb-2">
+      <div class="stars">
+        <div class="star"><img src="assets/star_selected" alt="" srcset=""></div>
+        <div class="star"><img src="assets/star_selected" alt="" srcset=""></div>
+        <div class="star"><img src="assets/star_selected" alt="" srcset=""></div>
+        <div class="star"><img src="assets/star_selected" alt="" srcset=""></div>
+        <div class="star"><img src="assets/star" alt="" srcset=""></div>
+      </div>
+      <p class="mr-2 text-danger font-weight-bold price">
+        <%= number_to_currency(product.price * (100 - product.discount) / 100, precision: 0) %>
+      </p>
     </div>
+    
+    <div class="w-100 border-bottom"></div>
+    <%= link_to '/owner', class: 'pt-1 link pt-2 pb-2' do %>
+      <span>
+        <img src="/assets/porsche.png" alt="">
+      </span>
+      <span>
+        Porsche Official
+      </span>
+    <% end %>
   </div>
-  <div class="horizontal-row top-border">
-    <%= image_tag("sticker.png") %>
-    <p>Porsche Official</p>
-  </div>
-</a>
+</div>

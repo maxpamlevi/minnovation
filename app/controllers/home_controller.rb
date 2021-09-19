@@ -13,5 +13,17 @@ class HomeController < ApplicationController
         @just_for_you_products = Product.where('thumbnail like "%drive%"').order('RAND()').limit(2)
         @best_buy_product = Product.where('thumbnail like "%drive%"').order('RAND()').first
     end
-    
+
+    def brand
+        @products = Product.where('thumbnail like "%drive%"').where("UPPER(vehicle_make) LIKE '%#{params[:brand].upcase.squish}%' ")
+    end
+
+    def search
+
+    end
+
+    def auction
+        @products = Product.where('thumbnail like "%drive%"')
+    end
+
 end

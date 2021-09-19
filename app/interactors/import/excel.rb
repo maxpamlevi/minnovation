@@ -27,11 +27,12 @@ module Import
                                    fuel_consumption: row[10].nil? ? '' : row[10].value,
                                    manufacturing_year: row[11].nil? ? '' : row[11].value,
                                     price: price_product(row[12].nil? ? '' : row[12].value.to_s),
-                                   discount: 0,
+                                   discount: rand(0...90),
                                    features: row[14].nil? ? '' : row[14].value,
                                    description: row[15].nil? ? '' : row[15].value,
                                    accessories: row[16].nil? ? '' : row[16].value,
-                                    thumbnail: row[17].nil? ? '' : row[17].value})
+                                    thumbnail: row[17].nil? ? '' : row[17].value,
+                                  logo: row[18].nil? ? '' : row[18].value})
           product.save!
         end
       end

@@ -11,4 +11,14 @@ $(document).ready(function() {
     $('.type-filter').click(function() {
         console.log('clicked->');
     });
+
+
+    $('.filter-search').click(function() {
+        console.log('clicked->');
+    });
+});
+
+const filter_search = document.getElementByClass('filter-search');
+filter_search.addEventListener('click', function() {
+console.log('clicked->');
 });

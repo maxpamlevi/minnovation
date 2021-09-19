@@ -1,0 +1,12 @@
+
+<%= render partial: 'layouts/search' %>
+
+
+<div class="section-products row bg-white mt-2 py-4 position-relative">
+  <% @products.each do |product| %>
+    <div class="col-12 px-4 py-2">
+        <%= render partial: 'shopping/auction', locals: {product: product} %>
+    </div>
+  <% end %>
+</div>
+

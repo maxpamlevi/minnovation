@@ -101,9 +101,14 @@ section {
       text-decoration: none;
     }
   }
-  .rating-price {
+  .flex-center {
     display: flex;
     justify-content: center;
+    align-items: center;
+  }
+  .rating-price {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     .stars {
       display: flex;
@@ -167,5 +172,40 @@ section {
 
   span, .price {
     font-size: 13px;
+  }
+}
+
+.auction-price {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  & > span {
+    color: #fff;
+    background: #1c75A1;
+    padding: 5px;
+  }
+  .auction-time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F6C358;
+    padding: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    .icon {
+      width: 15px;
+      height: 15px;
+      margin-right: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 100%;
+      }
+    }
+    span {
+      color: #fff;
+    }
   }
 }

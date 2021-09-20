@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get 'auction' => 'home#auction'
   get 'store' => 'home#store'
   get 'growth' => 'home#growth'
-
-
-
+  get 'brand/:brand'   => 'home#brand'
+  get 'auction'   => 'home#auction'
+  get 'search'  => 'home#search' 
 end

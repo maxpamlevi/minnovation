@@ -51,6 +51,4 @@ test:
 #
 production:
   <<: *default
-  database: minnovation_production
-  username: minnovation
-  password: <%= ENV['MINNOVATION_DATABASE_PASSWORD'] %>
+  database: zln5g28fbikri7n6

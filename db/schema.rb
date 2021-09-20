@@ -30,7 +30,8 @@ ActiveRecord::Schema.define(version: 2021_09_05_024138) do
     t.text "features"
     t.text "description"
     t.text "accessories"
-    t.string "url"
+    t.string "thumbnail"
+    t.string "logo"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

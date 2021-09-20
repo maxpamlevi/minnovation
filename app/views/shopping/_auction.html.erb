@@ -1,5 +1,5 @@
-<div class="product-item">
-  <div class="border p-1">
+<div class="product-item box-shadow">
+  <div class="p-1">
     <div class='product-image'>
       <img class="w-100 p-1" src="<%=product.link_img%>" alt="">
     </div>
@@ -46,13 +46,19 @@
         <div class="star"><img src="/assets/star_selected" alt="" srcset=""></div>
         <div class="star"><img src="/assets/star" alt="" srcset=""></div>
       </div>
-      <p class="mr-2 text-danger font-weight-bold price">
-        <%= number_to_currency(product.price * (100 - product.discount) / 100, precision: 0) %>
-      </p>
+      <div class="auction-price">
+        <div class="auction-time">
+          <div class="icon">
+            <img src="/assets/carbon_time.png" alt="">
+          </div>
+          <span>15d 15h 27m 03s</span>
+        </div>
+        <span><%= number_to_currency(product.price * (100 - product.discount) / 100, precision: 0) %></span>
+      </div>
     </div>
     
     <div class="w-100 border-bottom"></div>
-    <%= link_to "/brand/#{product.vehicle_make}", class: 'pt-1 link pt-2 pb-2' do %>
+    <%= link_to "/brand/#{product.vehicle_make}", class: 'pt-1 link pt-2 pb-2 flex-center' do %>
       <span>
         <img src="/assets/porsche.png" alt="">
       </span>

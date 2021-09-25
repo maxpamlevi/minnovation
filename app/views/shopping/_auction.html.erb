@@ -8,7 +8,7 @@
     </div>
     <%= link_to "/product/#{product.id}/#{product.name}", class: 'pt-1 link' do %>
       <span>
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="6" cy="6" r="6" fill="#00BE65" />
         </svg>
       </span>
@@ -59,8 +59,8 @@
     
     <div class="w-100 border-bottom"></div>
     <%= link_to "/brand/#{product.vehicle_make}", class: 'pt-1 link pt-2 pb-2 flex-center' do %>
-      <span>
-        <img src="/assets/porsche.png" alt="">
+      <span class='logo'>
+        <img src="<%= product.logo_img %>" alt="">
       </span>
       <span>
         <%= product.vehicle_make %> Official

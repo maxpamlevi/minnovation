@@ -28,31 +28,37 @@
     <div class="content-filter">
       <div class="list-filters">
 
-        <div class="type-filter active">
+        <div class="type-filter">
           <div class="head-filter">
             <p>Sort by</p>
-            <div class="icon"><img src="/assets/next" alt="" srcset=""></div>
+            <div class="icon">
+              <img src="/assets/next" alt="" srcset="">
+              <img src="/assets/next_active" alt="" srcset="">
+            </div>
           </div>
           <div class="list-sub-filters mt-1">
-            <p>None</p>
-            <p>Price ascending</p>
-            <p>Price descending</p>
-            <p>Product name ascending</p>
-            <p>Product name descending</p>
-            <p>Store name ascending</p>
-            <p>Store name descending</p>
-            <p>Upload date ascending</p>
-            <p>Upload date descending</p>
+            <p data-value='none' data-default='Sort by'>None</p>
+            <p data-value='price-ascending'>Price ascending</p>
+            <p data-value='price-descending'>Price descending</p>
+            <p data-value='product-name-ascending'>Product name ascending</p>
+            <p data-value='product-name-descending'>Product name descending</p>
+            <p data-value='store-name-ascending'>Store name ascending</p>
+            <p data-value='store-name-descending'>Store name descending</p>
+            <p data-value='upload-date-ascending'>Upload date ascending</p>
+            <p data-value='upload-date-descending'>Upload date descending</p>
           </div>
         </div>
 
-        <div class="type-filter open">
+        <div class="type-filter">
           <div class="head-filter">
             <p>Category</p>
-            <div class="icon"><img src="/assets/next" alt="" srcset=""></div>
+            <div class="icon">
+              <img src="/assets/next" alt="" srcset="">
+              <img src="/assets/next_active" alt="" srcset="">
+            </div>
           </div>
           <div class="list-sub-filters mt-1">
-            <p>None</p>
+            <p data-value='none' data-default='Category'>None</p>
             <p>Price ascending</p>
             <p>Price descending</p>
             <p>Product name ascending</p>
@@ -67,10 +73,13 @@
         <div class="type-filter">
           <div class="head-filter">
             <p>Brand</p>
-            <div class="icon"><img src="/assets/next" alt="" srcset=""></div>
+            <div class="icon">
+              <img src="/assets/next" alt="" srcset="">
+              <img src="/assets/next_active" alt="" srcset="">
+            </div>
           </div>
           <div class="list-sub-filters mt-1">
-            <p>None</p>
+            <p data-value='none' data-default='Brand'>None</p>
             <p>Price ascending</p>
             <p>Price descending</p>
             <p>Product name ascending</p>
@@ -85,10 +94,13 @@
         <div class="type-filter">
           <div class="head-filter">
             <p>Color</p>
-            <div class="icon"><img src="/assets/next" alt="" srcset=""></div>
+            <div class="icon">
+              <img src="/assets/next" alt="" srcset="">
+              <img src="/assets/next_active" alt="" srcset="">
+            </div>
           </div>
           <div class="list-sub-filters mt-1">
-            <p>None</p>
+            <p data-value='none' data-default='Color'>None</p>
             <p>Price ascending</p>
             <p>Price descending</p>
             <p>Product name ascending</p>
@@ -102,10 +114,13 @@
         <div class="type-filter">
           <div class="head-filter">
             <p>Store</p>
-            <div class="icon"><img src="/assets/next" alt="" srcset=""></div>
+            <div class="icon">
+              <img src="/assets/next" alt="" srcset="">
+              <img src="/assets/next_active" alt="" srcset="">
+            </div>
           </div>
           <div class="list-sub-filters mt-1">
-            <p>None</p>
+            <p data-value='none' data-default='Store'>None</p>
             <p>Price ascending</p>
             <p>Price descending</p>
             <p>Product name ascending</p>
@@ -118,24 +133,24 @@
         </div>
       </div>
       <div class="price-range">
-        
+        <input type="text" class="js-range-slider" name="my_range" value="" />
       </div>
-      <div class="star-rating">
-        <p>Mininum Start Rating</p>
+      <div class="star-rating mb-3">
+        <p class='mb-2'>Mininum Start Rating</p>
         <div class="stars">
-          <div class="start-item">
+          <div class="star-item" data-value='1'>
             <img src="/assets/star" alt="" srcset="">
           </div>
-          <div class="start-item">
+          <div class="star-item" data-value='2'>
             <img src="/assets/star" alt="" srcset="">
           </div>
-          <div class="start-item">
+          <div class="star-item" data-value='3'>
             <img src="/assets/star" alt="" srcset="">
           </div>
-          <div class="start-item">
+          <div class="star-item" data-value='4'>
             <img src="/assets/star" alt="" srcset="">
           </div>
-          <div class="start-item">
+          <div class="star-item" data-value='5'>
             <img src="/assets/star" alt="" srcset="">
           </div>
         </div>

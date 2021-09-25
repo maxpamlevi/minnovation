@@ -14,6 +14,10 @@ module Import
           next if idx.zero?
           break if idx > 30 || row[0].value.blank? || row[0].value.nil?
 
+          discount = rand(0...90)
+          discount = 0 if discount < 50
+          state = rand(0...4)
+          state = 0 if state >=4
           product = Product.create({vehicle_make:row[0].nil? ? '' : row[0].value,
                                    model: row[1].nil? ? '' : row[1].value,
                                    name: row[2].nil? ? '' : row[2].value,
@@ -27,7 +31,8 @@ module Import
                                    fuel_consumption: row[10].nil? ? '' : row[10].value,
                                    manufacturing_year: row[11].nil? ? '' : row[11].value,
                                     price: price_product(row[12].nil? ? '' : row[12].value.to_s),
-                                   discount: rand(0...90),
+                                   discount: discount,
+                                   state: state,
                                    features: row[14].nil? ? '' : row[14].value,
                                    description: row[15].nil? ? '' : row[15].value,
                                    accessories: row[16].nil? ? '' : row[16].value,

@@ -10,9 +10,15 @@ import "channels"
 
 import "bootstrap"
 import "../stylesheets/application"
+import "jquery"
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
+const filter_dialog = $('.filter-dialog');
+$('.filter-search').on('click',function() {
+    alert('test');
+    filter_dialog.toggleClass('open');
+});
 

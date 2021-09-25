@@ -1,6 +1,8 @@
 //= require websocket_rails/main
 
 $(document).ready(function() {
+    alert('come here');
+    
     $('.carousel').carousel({
         interval: 2000
     });
@@ -15,6 +17,10 @@ $(document).ready(function() {
 
     $('.filter-search').click(function() {
         console.log('clicked->');
+    });
+
+    $('.filter-search').on('click', function() {
+        alert('test');
     });
 });
 

@@ -8,11 +8,11 @@
     </div>
     <%= link_to "/product/#{product.id}/#{product.name}", class: 'pt-1 link' do %>
       <span>
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="6" cy="6" r="6" fill="#00BE65" />
+        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="6" cy="6" r="6" fill="<%=product.state_color%>" />
         </svg>
       </span>
-      <span><%= product.name %></span>
+      <span class='overflow-line'><%= product.name %></span>
     <% end %>
 
     <%= link_to "/brand/#{product.vehicle_make}", class: 'pt-1 link' do %>
@@ -27,16 +27,18 @@
         <%= product.vehicle_make %>
       </span>
     <% end %> 
-    <% if product.discount > 0 %>
-      <div class="discount mt-1">
-        <span class="text-right pt-2 discount-price mr-4" style="text-align: right">
-          <%= number_to_currency(product.price, precision: 0) %>
-        </span>
-        <div class="discount-task">
-          <span>-<%=product.discount%>%</span>
-        </div>
-      </div>
-    <% end %>
+
+    <div class="discount mt-1">
+        <% if product.discount > 0 %>
+          <span class="text-right discount-price mr-2" style="text-align: right">
+            <%= number_to_currency(product.price, precision: 0) %>
+          </span>
+          <div class="discount-task">
+            <span>-<%=product.discount%>%</span>
+          </div>
+        <% end %>
+    </div>
+
     
     <div class="rating-price pt-2 pb-2">
       <div class="stars">
@@ -53,10 +55,10 @@
     
     <div class="w-100 border-bottom"></div>
     <%= link_to "/brand/#{product.vehicle_make}", class: 'pt-1 link pt-2 pb-2' do %>
-      <span>
-        <img src="/assets/porsche.png" alt="">
+      <span class='logo'>
+        <img src="<%= product.logo_img %>" alt="">
       </span>
-      <span>
+      <span class='overflow-line'>
         <%= product.vehicle_make %> Official
       </span>
     <% end %>

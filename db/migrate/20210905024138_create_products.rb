@@ -20,6 +20,7 @@ class CreateProducts < ActiveRecord::Migration[6.1]
       t.text :accessories
       t.string :thumbnail
       t.string :logo
+      t.integer :state
 
       t.timestamps
     end

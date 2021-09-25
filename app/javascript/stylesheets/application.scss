@@ -83,7 +83,12 @@ section {
     border-radius: 15px; 
     background: #F5F5F5;
   }
-
+  a {
+    color: #474747;
+    &:focus, &:hover {
+      color: #474747;
+    }
+  }
   .link {
     text-decoration: none;
     display: flex;
@@ -129,45 +134,42 @@ section {
       margin-bottom: 0;
     }
   }
+  .overflow-line {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
   .discount {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    height: 30px;
     .discount-price {
       text-decoration: line-through;
       color: #A7A7A7;
     }
     .discount-task {
-      background-color: #E56353;
-      height: 40px;
       display: flex;
       justify-content: center;
       align-items: center;
       position: relative;
-      padding: 5px;
-      border-radius: 5px;
       span {
+        padding: 5px;
         color: #fff;
         z-index: 2;
-      }
-
-      &::before {
-        position: absolute;
-        content: '';
-        width: 32px;
-        height: 32px;
-        transform: rotate(45deg);
-        top: 4px;
-        left: -30%;
-        background: #E56353;
-        z-index: 1;
-        border-radius: 5px;
+        background: url('/assets/discount_mark.png') no-repeat center;
       }
     }
   }
 
   span, .price {
     font-size: 13px;
+  }
+}
+.products {
+  .product-image {
+    height: 110px;
+    overflow: hidden;
   }
 }
 
@@ -202,6 +204,21 @@ section {
     }
     span {
       color: #fff;
+    }
+  }
+}
+
+
+span {
+  &.logo {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 100%;
+      margin: auto;
     }
   }
 }

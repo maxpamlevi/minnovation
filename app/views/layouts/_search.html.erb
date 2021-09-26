@@ -10,7 +10,8 @@
     <input type="text" class="form-control" placeholder="Search" style="border-radius: 16px">
     <div class="filter-search">
       <div class="icon">
-        <img src="/assets/filter_search.png" alt="" srcset="">
+        <img src="/assets/filter_search" alt="" srcset="">
+        <img src="/assets/filter_search_active" alt="" srcset="">
       </div>
     </div>
   </div>
@@ -28,7 +29,7 @@
     <div class="content-filter">
       <div class="list-filters">
 
-        <div class="type-filter">
+        <div class="type-filter" data-type='sort_by'>
           <div class="head-filter">
             <p>Sort by</p>
             <div class="icon">
@@ -49,7 +50,7 @@
           </div>
         </div>
 
-        <div class="type-filter">
+        <div class="type-filter" data-type='category'>
           <div class="head-filter">
             <p>Category</p>
             <div class="icon">
@@ -70,7 +71,7 @@
           </div>
         </div>
 
-        <div class="type-filter">
+        <div class="type-filter" data-type='brand'>
           <div class="head-filter">
             <p>Brand</p>
             <div class="icon">
@@ -91,7 +92,7 @@
           </div>
         </div>
 
-        <div class="type-filter">
+        <div class="type-filter" data-type='color'>
           <div class="head-filter">
             <p>Color</p>
             <div class="icon">
@@ -111,7 +112,7 @@
             <p>Upload date descending</p>
           </div>
         </div>
-        <div class="type-filter">
+        <div class="type-filter" data-type='store'>
           <div class="head-filter">
             <p>Store</p>
             <div class="icon">
@@ -136,22 +137,27 @@
         <input type="text" class="js-range-slider" name="my_range" value="" />
       </div>
       <div class="star-rating mb-3">
-        <p class='mb-2'>Mininum Start Rating</p>
+        <p class='mb-2'>Mininum Star Rating</p>
         <div class="stars">
           <div class="star-item" data-value='1'>
             <img src="/assets/star" alt="" srcset="">
+            <img src="/assets/star_selected" alt="" srcset="">
           </div>
           <div class="star-item" data-value='2'>
             <img src="/assets/star" alt="" srcset="">
+            <img src="/assets/star_selected" alt="" srcset="">
           </div>
           <div class="star-item" data-value='3'>
             <img src="/assets/star" alt="" srcset="">
+            <img src="/assets/star_selected" alt="" srcset="">
           </div>
           <div class="star-item" data-value='4'>
             <img src="/assets/star" alt="" srcset="">
+            <img src="/assets/star_selected" alt="" srcset="">
           </div>
           <div class="star-item" data-value='5'>
             <img src="/assets/star" alt="" srcset="">
+            <img src="/assets/star_selected" alt="" srcset="">
           </div>
         </div>
       </div>
@@ -162,3 +168,88 @@
     </div>
   </div>
 </div>
+
+<script>
+  const filter_dialog = $('.filter-dialog');
+  var filter_sort_by = 'none';
+  var filter_category = 'none';
+  var filter_brand = 'none';
+  var filter_color = 'none';
+  var filter_store = 'none';
+
+  $('.filter-search').on('click',function() {
+      filter_dialog.addClass('open');
+  });
+  $('.type-filter').on('click', function() {
+    $(this).addClass('open');
+  });
+  $('.list-sub-filters > p').on('click', function(e) {
+    e.stopPropagation();
+    $(this).parent().parent().removeClass('open');
+    let selectedValue = $(this).data('value');
+    const type = $(this).parent().parent().data('type');
+    if (selectedValue == 'none') {
+      $(this).parent().parent().find('div.head-filter').removeClass('active');
+      $(this).parent().parent().find('div.head-filter > p').text($(this).data('default'));
+    } else {
+      $(this).parent().parent().find('div.head-filter').addClass('active');
+      $(this).parent().parent().find('div.head-filter > p').text($(this).text());
+    }
+    if(selectedValue == 'none') {
+      if (type == 'sort_by') {
+        filter_sort_by = 'none';
+      }
+      if (type == 'category') {
+        filter_category = 'none';
+      }
+      if (type == 'brand') {
+        filter_brand = 'none';
+      }
+      if (type == 'color') {
+        filter_color = 'none';
+      }
+      if (type == 'store') {
+        filter_store = 'none';
+      }
+    } else {
+      if (type == 'sort_by') {
+        filter_sort_by = selectedValue;
+      }
+      if (type == 'category') {
+        filter_category = selectedValue;
+      }
+      if (type == 'brand') {
+        filter_brand = selectedValue;
+      }
+      if (type == 'color') {
+        filter_color = selectedValue;
+      }
+      if (type == 'store') {
+        filter_store = selectedValue;
+      }
+    }
+  });
+
+  $('.actions-dialog > div:first-child').on('click', function() {
+    filter_dialog.removeClass('open');
+  });
+  $('.actions-dialog > div:last-child').on('click', function() {
+    filter_dialog.removeClass('open');
+    if (filter_sort_by != 'none' || filter_category != 'none' || filter_brand != 'none' || filter_color != 'none' || filter_store != 'none') {
+      $('.filter-search').addClass('active');
+    } else {
+      $('.filter-search').removeClass('active');
+    }
+  });
+
+  $('.filter-dialog .stars > .star-item').click(function() {
+    const num_star = $(this).data('value');
+    $.each($('.filter-dialog .stars > .star-item'), function(idx, item) {
+      if (idx < num_star) {
+        $(item).addClass('active');
+      } else {
+        $(item).removeClass('active');
+      }
+    });
+  });
+</script>

@@ -21,7 +21,8 @@ class CreateProducts < ActiveRecord::Migration[6.1]
       t.string :thumbnail
       t.string :logo
       t.integer :state
-
+      t.references :owner, index: true, foreign_key: { to_table: :users }
+      
       t.timestamps
     end
   end

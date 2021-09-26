@@ -39,12 +39,35 @@
         background: #fff;
         border: none;
     }
-    .filter-search {
-        cursor: pointer;
-    }
     input.form-control {
         padding: 10px 40px;
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+}
+
+.filter-search {
+    cursor: pointer;
+    & > .icon {
+        & > img {
+            &:first-child {
+                display: block;
+            }
+            &:last-child {
+                display: none;
+            }
+        }
+    }
+    &.active {
+        & > .icon {
+            & > img {
+                &:first-child {
+                    display: none;
+                }
+                &:last-child {
+                    display: block;
+                }
+            }
+        }
     }
 }
 
@@ -256,6 +279,26 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    .star-item {
+                        img {
+                            &:first-child {
+                                display: block;
+                            }
+                            &:last-child {
+                                display: none;
+                            }
+                        }
+                        &.active {
+                            img {
+                                &:first-child {
+                                    display: none;
+                                }
+                                &:last-child {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
                 }
             }
             .actions-dialog {

@@ -1,0 +1,235 @@
+<div class="store-top-layout p-3">
+    <div class="info-store">
+        <div class="logo-store">
+            <img src="/assets/motorist" alt="">
+        </div>
+        <div class="title-store pl-2 pr-2">
+            <p class="name-store mt-0 mb-0">Motorist</p>
+            <div class="quality-store">
+                <div class="quality-icon">
+                    <img src="/assets/quality_store" alt="">
+                </div>
+                <span>Official Store</span>
+            </div>
+        </div>
+        <div class="action-store">
+            <div class="follow-store">Follow</div>
+        </div>
+    </div>
+
+    <div class="reviews-store mt-4">
+        <div class="review-store">
+            <div class="number">95%</div>
+            <div class="info">Positive reviews</div>
+        </div>
+        <div class="review-store">
+            <div class="number">100k</div>
+            <div class="info">Followers</div>
+        </div>
+    </div>
+    <div class="tabs-store mt-4">
+       <div data-tab='0' class="active">Home</div>
+       <div data-tab='1'>New</div>
+       <div data-tab='2'>Sale</div>
+       <div data-tab='3'>Reviews</div>
+    </div>
+</div>
+
+<div class="content-store">
+    <div class="tab-content pb-3 active" data-tab='0'>
+        <div class="top-absolute-action">About us</div>
+        <div class="p-3">
+            <p class="main-description p-2">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio architecto, veritatis quos debitis eum explicabo id praesentium consequatur esse deleniti quasi eligendi nobis ipsa quis voluptates labore. Dolorem, nesciunt tenetur?
+    
+                <br> <br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore itaque doloremque exercitationem repellat non molestiae dolor accusantium esse. Modi similique veritatis consequuntur quo iste quibusdam cum itaque doloribus in qui?
+            </p>
+            <div class="address-store p-2">
+                <p class="title">Get Touch With Us</p>
+                <div class="address">
+                    <div class="quality-icon">
+                        <img src="/assets/address_icon" alt="">
+                    </div>
+                    <span>12 Tai Seng Link #06-02 Singapore 534233</span>
+                </div>
+                <div class="address mt-2">
+                    <div class="quality-icon">
+                        <img src="/assets/phone_icon" alt="">
+                    </div>
+                    <span>+65 6589 8800</span>
+                </div>
+                <div class="address mt-2">
+                    <div class="quality-icon">
+                        <img src="/assets/email_icon" alt="">
+                    </div>
+                    <span>enquiry@motorist.sg</span>
+                </div>
+            </div>
+        </div>
+        <div class="map-store mt-4">
+            <img src="/assets/store_map" alt="">
+        </div>
+    </div>
+    <div class="tab-content" data-tab='1'>
+        <%= render partial: 'layouts/search' %>
+
+
+        <div class="section-products row bg-white mt-2 py-4 position-relative pr-2 pl-2">
+          <% @new_products.each do |product| %>
+            <div class="col-6 pb-4">
+                <%= render partial: 'shopping/product', locals: {product: product} %>
+            </div>
+          <% end %>
+        </div>
+    </div>
+    <div class="tab-content" data-tab='2'>
+        <%= render partial: 'layouts/search' %>
+
+
+        <div class="section-products row bg-white mt-2 py-4 position-relative pr-2 pl-2">
+          <% @sale_products.each do |product| %>
+            <div class="col-6 pb-4">
+                <%= render partial: 'shopping/product', locals: {product: product} %>
+            </div>
+          <% end %>
+        </div>
+    </div>
+    <div class="tab-content" data-tab='3'>
+        <div class="summary-reviews">
+            <p>4.5 / 5.0</p>
+            <div class="star-reviews">
+               <div class="content-start-reviews">
+                    <div class="row-stars">
+                        <div class="star"><img src="/assets/star_selected" alt="" srcset=""></div>
+                        <div class="star"><img src="/assets/star_selected" alt="" srcset=""></div>
+                        <div class="star"><img src="/assets/star_selected" alt="" srcset=""></div>
+                        <div class="star"><img src="/assets/star_selected" alt="" srcset=""></div>
+                        <div class="star"><img src="/assets/star_selected" alt="" srcset=""></div>
+                        <div class="person"><span>999+</span></div>
+                    </div>
+                    <div class="row-stars">
+                        <div class="star"><img src="/assets/star_selected" alt="" srcset=""></div>
+                        <div class="star"><img src="/assets/star_selected" alt="" srcset=""></div>
+                        <div class="star"><img src="/assets/star_selected" alt="" srcset=""></div>
+                        <div class="star"><img src="/assets/star_selected" alt="" srcset=""></div>
+                        <div class="star"><img src="/assets/star" alt="" srcset=""></div>
+                        <div class="person"><span>809</span></div>
+                    </div>
+                    <div class="row-stars">
+                        <div class="star"><img src="/assets/star_selected" alt="" srcset=""></div>
+                        <div class="star"><img src="/assets/star_selected" alt="" srcset=""></div>
+                        <div class="star"><img src="/assets/star_selected" alt="" srcset=""></div>
+                        <div class="star"><img src="/assets/star" alt="" srcset=""></div>
+                        <div class="star"><img src="/assets/star" alt="" srcset=""></div>
+                        <div class="person"><span>423</span></div>
+                    </div>
+                    <div class="row-stars">
+                        <div class="star"><img src="/assets/star_selected" alt="" srcset=""></div>
+                        <div class="star"><img src="/assets/star_selected" alt="" srcset=""></div>
+                        <div class="star"><img src="/assets/star" alt="" srcset=""></div>
+                        <div class="star"><img src="/assets/star" alt="" srcset=""></div>
+                        <div class="star"><img src="/assets/star" alt="" srcset=""></div>
+                        <div class="person"><span>184</span></div>
+                    </div>
+                    <div class="row-stars">
+                        <div class="star"><img src="/assets/star_selected" alt="" srcset=""></div>
+                        <div class="star"><img src="/assets/star" alt="" srcset=""></div>
+                        <div class="star"><img src="/assets/star" alt="" srcset=""></div>
+                        <div class="star"><img src="/assets/star" alt="" srcset=""></div>
+                        <div class="star"><img src="/assets/star" alt="" srcset=""></div>
+                        <div class="person"><span>617</span></div>
+                    </div>
+                    <div class="row-stars">
+                        <div class="star"><img src="/assets/star" alt="" srcset=""></div>
+                        <div class="star"><img src="/assets/star" alt="" srcset=""></div>
+                        <div class="star"><img src="/assets/star" alt="" srcset=""></div>
+                        <div class="star"><img src="/assets/star" alt="" srcset=""></div>
+                        <div class="star"><img src="/assets/star" alt="" srcset=""></div>
+                        <div class="person"><span>0</span></div>
+                    </div>
+               </div>
+            </div>
+        </div>
+        <div class="list-comments mt-3">
+            <div class="comment">
+                <div class="reviewer p-2">
+                    <div class="avatar">
+                        <img src="/assets/man_avatar" alt="">
+                    </div>
+                    <div class="reviewer-info">
+                        <p class="m-0">Jack</p>
+                        <div class="row-stars">
+                            <div class="star"><img src="/assets/star_selected" alt="" srcset=""></div>
+                            <div class="star"><img src="/assets/star_selected" alt="" srcset=""></div>
+                            <div class="star"><img src="/assets/star_selected" alt="" srcset=""></div>
+                            <div class="star"><img src="/assets/star_selected" alt="" srcset=""></div>
+                            <div class="star"><img src="/assets/star" alt="" srcset=""></div>
+                        </div>
+                    </div>
+                </div>
+                <p class="content-message">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat dicta voluptates numquam totam placeat veniam molestias omnis, optio quam, perferendis vitae error iste hic vel qui velit ratione dolores? Alias?
+                </p>
+            </div>
+            <div class="comment">
+                <div class="reviewer p-2">
+                    <div class="avatar">
+                        <img src="/assets/man_avatar" alt="">
+                    </div>
+                    <div class="reviewer-info">
+                        <p class="m-0">Peter</p>
+                        <div class="row-stars">
+                            <div class="star"><img src="/assets/star_selected" alt="" srcset=""></div>
+                            <div class="star"><img src="/assets/star_selected" alt="" srcset=""></div>
+                            <div class="star"><img src="/assets/star_selected" alt="" srcset=""></div>
+                            <div class="star"><img src="/assets/star_selected" alt="" srcset=""></div>
+                            <div class="star"><img src="/assets/star" alt="" srcset=""></div>
+                        </div>
+                    </div>
+                </div>
+                <p class="content-message">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat dicta voluptates numquam totam placeat veniam molestias omnis, optio quam, perferendis vitae error iste hic vel qui velit ratione dolores? Alias?
+                </p>
+            </div>
+            <div class="comment">
+                <div class="reviewer p-2">
+                    <div class="avatar">
+                        <img src="/assets/man_avatar" alt="">
+                    </div>
+                    <div class="reviewer-info">
+                        <p class="m-0">Damian</p>
+                        <div class="row-stars">
+                            <div class="star"><img src="/assets/star_selected" alt="" srcset=""></div>
+                            <div class="star"><img src="/assets/star_selected" alt="" srcset=""></div>
+                            <div class="star"><img src="/assets/star_selected" alt="" srcset=""></div>
+                            <div class="star"><img src="/assets/star_selected" alt="" srcset=""></div>
+                            <div class="star"><img src="/assets/star" alt="" srcset=""></div>
+                        </div>
+                    </div>
+                </div>
+                <p class="content-message">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat dicta voluptates numquam totam placeat veniam molestias omnis, optio quam, perferendis vitae error iste hic vel qui velit ratione dolores? Alias?
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $('.tabs-store > div').on('click', function() {
+        const tab_idx = $(this).data('tab');
+        const all_tabs = $('.tabs-store > div');
+        const content_tabs = $('.content-store > div.tab-content');
+        $.each(all_tabs, function(idx, tab) {
+            if (idx != tab_idx) {
+                $(tab).removeClass('active');
+                $(content_tabs[idx]).removeClass('active');
+            } else {
+                $(tab).addClass('active');
+                $(content_tabs[idx]).addClass('active');
+            }
+        });
+    });
+</script>

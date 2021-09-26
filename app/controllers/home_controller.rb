@@ -23,7 +23,11 @@ class HomeController < ApplicationController
     end
 
     def auction
-        @products = Product.where('thumbnail like "%drive%"')
+        @auctions = Auction.includes(:product).where.not(status: :closed)
     end
 
+    def store
+        @new_products = Product.where('thumbnail like "%drive%"').where(state: 0)
+        @sale_products = Product.where('thumbnail like "%drive%"').where('discount > 0').order(:created_at)
+    end
 end

@@ -1,4 +1,8 @@
 class Product < ApplicationRecord
+
+    belongs_to :owner, class_name: 'User'
+    has_one :auction, dependent: :destroy
+
     def link_img
         id = thumbnail.split("file/d/")[1].split("/")[0]
         "https://drive.google.com/uc?export=view&id=#{id}"

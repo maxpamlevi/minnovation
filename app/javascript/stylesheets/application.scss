@@ -578,7 +578,7 @@ span {
 .countdown {
   .part {
     padding: 0 !important;
-    padding-right: 10px !important;
+    padding-right: 12px !important;
     padding-left: 5px !important;
     display: flex !important;
     justify-content: center !important;
@@ -602,9 +602,9 @@ span {
       color: inherit;
       background-color: inherit;
       z-index: 1;
-      top: 50% !important;
-      left: 13px !important;
-      transform: translateY(-100%);
+      bottom: 0 !important;
+      left: 14.5px !important;
+      // transform: translateY(-100%);
     }
     &:nth-child(1) {
       &::after {

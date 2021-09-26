@@ -8,6 +8,7 @@ module Import
 
     def call
       workbook = RubyXL::Parser.parse("storage/VEHICLES.xlsx")
+      users = list_users
       workbook.worksheets.size.times do |sh|
         worksheet = workbook.worksheets[sh]
         worksheet.each_with_index do |row, idx|
@@ -37,13 +38,51 @@ module Import
                                    description: row[15].nil? ? '' : row[15].value,
                                    accessories: row[16].nil? ? '' : row[16].value,
                                     thumbnail: row[17].nil? ? '' : row[17].value,
-                                  logo: row[18].nil? ? '' : row[18].value})
+                                  logo: row[18].nil? ? '' : row[18].value,
+                                  owner: User.find_by(users[rand(0...users.count)])
+                                  })
           product.save!
+
+          # generate auction
+          started_at = rand(1...91).days.from_now
+          if rand(0...2).positive?
+            Auction.create!(started_at: started_at, product: product, status: :opening)
+          end
+          #end
         end
       end
     end
 
     private
+
+    def list_users
+      [
+        {
+          email: 'obama@usa.com',
+          name: 'Obama'
+        },
+        {
+          email: 'trumb@usa.com',
+          name: 'Trumb'
+        },
+        {
+          email: 'michael@sg.com',
+          name: 'Michael'
+        },
+        {
+          email: 'damian@sg.com',
+          name: 'Damian'
+        }
+      ]
+    end
+
+    def generate_users
+      User.create(list_users)
+    end
+
+    def generate_auction
+
+    end
 
     def price_product(str)
       str.gsub('$', '').gsub(',','').to_d

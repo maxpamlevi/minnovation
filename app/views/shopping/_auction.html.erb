@@ -3,10 +3,38 @@
     <div class='product-image'>
       <img class="w-100 p-1" src="<%=product.link_img%>" alt="">
     </div>
-    <div class="pt-1">
-      
+
+    <div class="rating-price pt-2 pb-2">
+      <div class="stars">
+        <div class="star"><img src="/assets/star_selected" alt="" srcset=""></div>
+        <div class="star"><img src="/assets/star_selected" alt="" srcset=""></div>
+        <div class="star"><img src="/assets/star_selected" alt="" srcset=""></div>
+        <div class="star"><img src="/assets/star_selected" alt="" srcset=""></div>
+        <div class="star"><img src="/assets/star" alt="" srcset=""></div>
+      </div>
+      <div class="auction-price">
+        <div class="auction-time">
+          <div class="icon">
+            <img src="/assets/carbon_time.png" alt="">
+          </div>
+          <span><%= auction.time_auction %></span>
+        </div>
+        <span><%= number_to_currency(product.price * (100 - product.discount) / 100, precision: 0) %></span>
+      </div>
     </div>
-    <%= link_to "/product/#{product.id}/#{product.name}", class: 'pt-1 link' do %>
+
+    <% if product.discount > 0 %>
+      <div class="discount mt-1">
+        <span class="text-right discount-price mr-2" style="text-align: right">
+          <%= number_to_currency(product.price, precision: 0) %>
+        </span>
+        <div class="discount-task">
+          <span>-<%=product.discount%>%</span>
+        </div>
+      </div>
+    <% end %>
+
+    <%= link_to "/product/#{product.id}/#{product.name}", class: 'pt-2 link' do %>
       <span>
         <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="6" cy="6" r="6" fill="#00BE65" />
@@ -27,37 +55,8 @@
         <%= product.vehicle_make %>
       </span>
     <% end %> 
-    <% if product.discount > 0 %>
-      <div class="discount mt-1">
-        <span class="text-right pt-2 discount-price mr-4" style="text-align: right">
-          <%= number_to_currency(product.price, precision: 0) %>
-        </span>
-        <div class="discount-task">
-          <span>-<%=product.discount%>%</span>
-        </div>
-      </div>
-    <% end %>
-    
-    <div class="rating-price pt-2 pb-2">
-      <div class="stars">
-        <div class="star"><img src="/assets/star_selected" alt="" srcset=""></div>
-        <div class="star"><img src="/assets/star_selected" alt="" srcset=""></div>
-        <div class="star"><img src="/assets/star_selected" alt="" srcset=""></div>
-        <div class="star"><img src="/assets/star_selected" alt="" srcset=""></div>
-        <div class="star"><img src="/assets/star" alt="" srcset=""></div>
-      </div>
-      <div class="auction-price">
-        <div class="auction-time">
-          <div class="icon">
-            <img src="/assets/carbon_time.png" alt="">
-          </div>
-          <span>15d 15h 27m 03s</span>
-        </div>
-        <span><%= number_to_currency(product.price * (100 - product.discount) / 100, precision: 0) %></span>
-      </div>
-    </div>
-    
-    <div class="w-100 border-bottom"></div>
+
+    <div class="w-100 border-bottom mt-2"></div>
     <%= link_to "/brand/#{product.vehicle_make}", class: 'pt-1 link pt-2 pb-2 flex-center' do %>
       <span class='logo'>
         <img src="<%= product.logo_img %>" alt="">

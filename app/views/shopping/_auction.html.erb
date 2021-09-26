@@ -1,4 +1,4 @@
-<div class="product-item box-shadow">
+<div class="product-item box-shadow radius-15">
   <div class>
     <div class='product-image'>
       <img class="w-100" src="<%=product.link_img%>" alt="">
@@ -45,7 +45,9 @@
       </span>
     <% end %> 
 
-    <div class="w-100 border-bottom mt-2"></div>
+    <div class="w-100 mt-2 pl-2 pr-2">
+      <div class="w-100 border-bottom"></div>
+    </div>
     <%= link_to "/brand/#{product.vehicle_make}", class: 'pt-1 link pt-2 pb-2 flex-center' do %>
       <span class='logo'>
         <img src="<%= product.logo_img %>" alt="">

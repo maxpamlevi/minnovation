@@ -221,8 +221,6 @@ section {
     color: #fff;
     background: #1c75A1;
     padding: 5px;
-    padding-top: 7px;
-    padding-bottom: 7.5px;
   }
   .auction-time {
     display: flex;
@@ -578,11 +576,25 @@ span {
 
 // countdown
 .countdown {
-  padding-top: 4px !important;
   .part {
     padding: 0 !important;
     padding-right: 10px !important;
     padding-left: 5px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    & > .digit {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      span {
+        vertical-align: middle !important;
+        &.digit-value {
+          top: 50% !important;
+          transform: translateY(-50%) !important;
+        }
+      }
+    }
     &::after {
       position: absolute;
       width: 20px !important;
@@ -590,8 +602,9 @@ span {
       color: inherit;
       background-color: inherit;
       z-index: 1;
-      top: -3.5px !important;
-      left: 12.5px !important;
+      top: 50% !important;
+      left: 13px !important;
+      transform: translateY(-100%);
     }
     &:nth-child(1) {
       &::after {
@@ -615,8 +628,13 @@ span {
     }
     &:not(:first-child) {
       &::before {
-        top: 0 !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
       }
     }
   }
+}
+
+.radius-15 {
+  border-radius: 15px !important;
 }

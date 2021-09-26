@@ -1,7 +1,7 @@
 <div class="product-item box-shadow">
-  <div class="p-1">
+  <div class>
     <div class='product-image'>
-      <img class="w-100 p-1" src="<%=product.link_img%>" alt="">
+      <img class="w-100" src="<%=product.link_img%>" alt="">
     </div>
 
     <div class="rating-price pt-2 pb-2">
@@ -23,18 +23,7 @@
       </div>
     </div>
 
-    <% if product.discount > 0 %>
-      <div class="discount mt-1">
-        <span class="text-right discount-price mr-2" style="text-align: right">
-          <%= number_to_currency(product.price, precision: 0) %>
-        </span>
-        <div class="discount-task">
-          <span>-<%=product.discount%>%</span>
-        </div>
-      </div>
-    <% end %>
-
-    <%= link_to "/product/#{product.id}/#{product.name}", class: 'pt-2 link' do %>
+    <%= link_to "/product/#{product.id}/#{product.name}", class: 'pt-2 link padding-left-10' do %>
       <span>
         <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="6" cy="6" r="6" fill="#00BE65" />
@@ -43,7 +32,7 @@
       <span><%= product.name %></span>
     <% end %>
 
-    <%= link_to "/brand/#{product.vehicle_make}", class: 'pt-1 link' do %>
+    <%= link_to "/brand/#{product.vehicle_make}", class: 'pt-1 link padding-left-10' do %>
       <span>
         <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path

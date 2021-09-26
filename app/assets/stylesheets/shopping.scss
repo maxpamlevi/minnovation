@@ -74,6 +74,9 @@
 .margin-top-40 {
     margin-top: 40px;
 }
+.margin-top-30 {
+    margin-top: 30px;
+}
 .blue-bg {
     background: url('/assets/new_mark.png') no-repeat center;
 }
@@ -238,6 +241,7 @@
                         padding: 10px 5px;
                         p {
                             color: #474747;
+                            width: 100%;
                         }
                     }
 
@@ -252,9 +256,6 @@
                 }
             }
 
-            .price-range {
-                height: 100px;
-            }
             .star-rating {
                 padding: 10px;
                 p {

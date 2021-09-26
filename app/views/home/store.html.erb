@@ -71,11 +71,11 @@
             <img src="/assets/store_map" alt="">
         </div>
     </div>
-    <div class="tab-content" data-tab='1'>
+    <div class="tab-content bg" data-tab='1'>
         <%= render partial: 'layouts/search' %>
 
 
-        <div class="section-products row bg-white mt-2 py-4 position-relative pr-2 pl-2">
+        <div class="section-products row bg-white margin-top-20 py-4 position-relative pr-2 pl-2">
           <% @new_products.each do |product| %>
             <div class="col-6 pb-4">
                 <%= render partial: 'shopping/product', locals: {product: product} %>
@@ -83,11 +83,11 @@
           <% end %>
         </div>
     </div>
-    <div class="tab-content" data-tab='2'>
+    <div class="tab-content bg" data-tab='2'>
         <%= render partial: 'layouts/search' %>
 
 
-        <div class="section-products row bg-white mt-2 py-4 position-relative pr-2 pl-2">
+        <div class="section-products row bg-white margin-top-20 py-4 position-relative pr-2 pl-2">
           <% @sale_products.each do |product| %>
             <div class="col-6 pb-4">
                 <%= render partial: 'shopping/product', locals: {product: product} %>
@@ -98,6 +98,7 @@
     <div class="tab-content" data-tab='3'>
         <div class="summary-reviews">
             <p>4.5 / 5.0</p>
+            <span></span>
             <div class="star-reviews">
                <div class="content-start-reviews">
                     <div class="row-stars">
@@ -151,7 +152,7 @@
                </div>
             </div>
         </div>
-        <div class="list-comments mt-3">
+        <div class="list-comments mt-2">
             <div class="comment">
                 <div class="reviewer p-2">
                     <div class="avatar">

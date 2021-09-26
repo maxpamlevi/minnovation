@@ -105,7 +105,10 @@
     </div>
   </div>
 </div>
-<div class="section-products bg-white mt-5 py-4 position-relative">
+
+<%
+=begin%>
+ <div class="section-products bg-white mt-5 py-4 position-relative">
   <div class="position-absolute w-auto px-5 py-2 text-white font-weight-bold " style="background:#F6C358;bottom: 100%; left: 30px; transform: translate(0%,50%); border-radius: 10px; font-size: 16px">
     Just For You
   </div>
@@ -118,14 +121,37 @@
       </div>
     <% end %>
   </div>
+</div> 
+<%
+=end%>
 
+<div class="section-products margin-top-40 position-relative pb-4">
+  <div class="position-absolute w-auto px-5 py-2 text-white font-weight-bold " style="background:#F6C358;bottom: 100%; left: 30px; transform: translate(0%,50%); border-radius: 10px; font-size: 16px">
+    Just For You
+  </div>
+  <div class="col-12 pt-4">
+  </div>
+  <div class="products mt-2">
+    <div class="row pl-3 pr-3">
+      <% @just_for_you_products.each do |product| %>
+        <div class='col-6'>
+          <%= render partial: 'shopping/product', locals: {product: product} %>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>
 
 
 <script>
   $('.show-more-btn').on('click',function (){
-    $(this).parents('.section-products').find('.hide-prod-item').removeClass('d-none');
-    $(this).hide()
+    if ($(this).text() == 'Hide') {
+      $(this).parents('.section-products').find('.hide-prod-item').addClass('d-none');
+      $(this).text('More');
+    } else {
+      $(this).parents('.section-products').find('.hide-prod-item').removeClass('d-none');
+      $(this).text('Hide');
+    }
   });
 
   $(document).ready(function() {

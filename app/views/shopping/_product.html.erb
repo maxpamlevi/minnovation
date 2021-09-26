@@ -1,12 +1,12 @@
 <div class="product-item">
-  <div class="border p-1">
+  <div class>
     <div class='product-image'>
-      <img class="w-100 p-1" src="<%=product.link_img%>" alt="">
+      <img class="w-100" src="<%=product.link_img%>" alt="">
     </div>
     <div class="pt-1">
       
     </div>
-    <%= link_to "/product/#{product.id}/#{product.name}", class: 'pt-1 link' do %>
+    <%= link_to "/product/#{product.id}/#{product.name}", class: 'pt-1 link padding-left-10 padding-right-10' do %>
       <span>
         <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="6" cy="6" r="6" fill="<%=product.state_color%>" />
@@ -15,7 +15,7 @@
       <span class='overflow-line'><%= product.name %></span>
     <% end %>
 
-    <%= link_to "/brand/#{product.vehicle_make}", class: 'pt-1 link' do %>
+    <%= link_to "/brand/#{product.vehicle_make}", class: 'pt-1 link padding-left-10 padding-right-10' do %>
       <span>
         <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -23,24 +23,24 @@
             fill="#E56353" />
         </svg>
       </span>
-      <span>
+      <span class='overflow-line'>
         <%= product.vehicle_make %>
       </span>
     <% end %> 
 
-    <div class="discount mt-1">
+    <div class="discount mt-1 padding-right-10">
         <% if product.discount > 0 %>
           <span class="text-right discount-price mr-2" style="text-align: right">
             <%= number_to_currency(product.price, precision: 0) %>
           </span>
           <div class="discount-task">
-            <span>-<%=product.discount%>%</span>
+            <span style='margin-left: 5px'>-<%=product.discount%>%</span>
           </div>
         <% end %>
     </div>
 
     
-    <div class="rating-price pt-2 pb-2">
+    <div class="rating-price pt-2 pb-2 padding-right-10">
       <div class="stars">
         <div class="star"><img src="/assets/star_selected" alt="" srcset=""></div>
         <div class="star"><img src="/assets/star_selected" alt="" srcset=""></div>
@@ -48,13 +48,13 @@
         <div class="star"><img src="/assets/star_selected" alt="" srcset=""></div>
         <div class="star"><img src="/assets/star" alt="" srcset=""></div>
       </div>
-      <p class="mr-2 text-danger font-weight-bold price">
+      <p class="text-danger font-weight-bold price">
         <%= number_to_currency(product.price * (100 - product.discount) / 100, precision: 0) %>
       </p>
     </div>
     
     <div class="w-100 border-bottom"></div>
-    <%= link_to "/brand/#{product.vehicle_make}", class: 'pt-1 link pt-2 pb-2' do %>
+    <%= link_to "/brand/#{product.vehicle_make}", class: 'pt-1 link pt-2 pb-2 padding-left-10 padding-right-10' do %>
       <span class='logo'>
         <img src="<%= product.logo_img %>" alt="">
       </span>

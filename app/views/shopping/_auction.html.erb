@@ -17,7 +17,7 @@
           <div class="icon">
             <img src="/assets/carbon_time.png" alt="">
           </div>
-          <span><%= auction.time_auction %></span>
+          <span><div data-role='countdown' data-hours='<%= auction.hour_auction%>>'></div></span>
         </div>
         <span><%= number_to_currency(product.price * (100 - product.discount) / 100, precision: 0) %></span>
       </div>

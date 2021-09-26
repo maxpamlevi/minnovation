@@ -21,4 +21,8 @@ class Auction < ApplicationRecord
         time_str = "#{time_str}#{seconds}s" if seconds > 0
         time_str
     end
+    def hour_auction
+        now = Time.zone.now
+        (started_at - now).to_i / ( 60 * 60)
+    end
 end

@@ -133,8 +133,21 @@
           </div>
         </div>
       </div>
+
       <div class="price-range">
-        <input type="text" class="js-range-slider" name="my_range" value="" />
+        <p>Price range</p>
+        <input data-role="doubleslider"
+       data-value-min="20"
+       data-value-max="80"
+       data-hint-always="true"
+       data-hint-position-min="bottom"
+       data-hint-position-max="top"
+       data-show-min-max="true"
+       data-cls-backside="bg-gray"
+       data-cls-marker="bg-green border-50 custom-marker"
+       data-cls-hint="bg-green custom-marker shadow-2"
+       data-cls-complete="bg-green"
+       data-cls-min-max="text-bold">
       </div>
       <div class="star-rating mb-3">
         <p class='mb-2'>Mininum Star Rating</p>
@@ -178,10 +191,10 @@
   var filter_store = 'none';
 
   $('.filter-search').on('click',function() {
-      filter_dialog.addClass('open');
+      filter_dialog.toggleClass('open');
   });
   $('.type-filter').on('click', function() {
-    $(this).addClass('open');
+    $(this).toggleClass('open');
   });
   $('.list-sub-filters > p').on('click', function(e) {
     e.stopPropagation();

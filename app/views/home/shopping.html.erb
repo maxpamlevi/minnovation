@@ -29,7 +29,7 @@
 
 <%= render partial: 'layouts/search' %>
 
-<div class="section-products margin-top-40">
+<div class="section-products margin-top-30">
   <div class="mark-top">
     <div class="mark-icon blue-bg">
       <span>New</span>
@@ -85,7 +85,7 @@
   <div class="position-absolute w-auto px-5 py-2 text-white font-weight-bold " style="background:#1C75A1;bottom: 100%; left: 50%; transform: translate(-50%,50%); border-radius: 10px; font-size: 16px">
     Best Buy
   </div>
-  <div class="col-12">
+  <div class="col-12 position-relative carousel-padding">
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <% @best_buy_product.each do |prod| %>
@@ -105,25 +105,6 @@
     </div>
   </div>
 </div>
-
-<%
-=begin%>
- <div class="section-products bg-white mt-5 py-4 position-relative">
-  <div class="position-absolute w-auto px-5 py-2 text-white font-weight-bold " style="background:#F6C358;bottom: 100%; left: 30px; transform: translate(0%,50%); border-radius: 10px; font-size: 16px">
-    Just For You
-  </div>
-  <div class="col-12 pt-4">
-  </div>
-  <div class="row">
-    <% @just_for_you_products.each do |product| %>
-      <div class='col-6'>
-        <%= render partial: 'shopping/product', locals: {product: product} %>
-      </div>
-    <% end %>
-  </div>
-</div> 
-<%
-=end%>
 
 <div class="section-products margin-top-40 position-relative pb-4">
   <div class="position-absolute w-auto px-5 py-2 text-white font-weight-bold " style="background:#F6C358;bottom: 100%; left: 30px; transform: translate(0%,50%); border-radius: 10px; font-size: 16px">
@@ -145,23 +126,12 @@
 
 <script>
   $('.show-more-btn').on('click',function (){
-    if ($(this).text() == 'Hide') {
+    if ($(this).text() == 'Less') {
       $(this).parents('.section-products').find('.hide-prod-item').addClass('d-none');
       $(this).text('More');
     } else {
       $(this).parents('.section-products').find('.hide-prod-item').removeClass('d-none');
-      $(this).text('Hide');
+      $(this).text('Less');
     }
-  });
-
-  $(document).ready(function() {
-    $(".js-range-slider").ionRangeSlider({
-        type: "double",
-        min: 0,
-        max: 1000,
-        from: 200,
-        to: 500,
-        grid: true
-    });
   });
 </script>

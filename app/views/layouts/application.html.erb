@@ -17,16 +17,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     
     <!--Plugin CSS file with desired skin-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
-    <!--jQuery-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!--Plugin JavaScript file-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
-
+    <link rel="stylesheet" href="https://streamtool.net/assets/Metro-UI-CSS-v.4.3.10/tests/metro/css/metro-all.css?ver=@@b-versionhttps://streamtool.net/assets/Metro-UI-CSS-v.4.3.10/tests/metro/css/metro-all.css?ver=@@b-version"/>
+    
+    
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class='m4-cloak'>
     <section class='wrapper' style="width: 100%; overflow-x: hidden">
       <%= yield %>
     </section>
@@ -34,5 +31,9 @@
     <footer class="footer">
       <%= render 'layouts/footer' %>
     </footer>
+
+    <!--Plugin JavaScript file-->
+    <script src="https://streamtool.net/assets/Metro-UI-CSS-v.4.3.10/tests/metro/js/metro.js?ver=@@b-version"></script>
+
   </body>
 </html>

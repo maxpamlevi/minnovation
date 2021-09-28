@@ -23,7 +23,15 @@ class HomeController < ApplicationController
 
     def search
         @products = Product.all
-        @products = @products.where("name like '%#{params[:keyword]}%'") if params[:keyword].present?
+        @products = @products.where("name like '%#{params[:keyword]}%' OR vehicle_make like '%#{params[:keyword]}%'") if params[:keyword].present?
+
+        @products = @products.where(color: params[:color]) if params[:color].present?
+        @products = @products.where(vehicle_make: params[:vehicle_make]) if params[:vehicle_make].present?
+        @products = @products.where('price > ? and price < ?', params[:range].split(', ')[0], params[:range].split(', ')[1]) if params[:range].present?
+        @products = @products.order("#{params[:order]}") if params[:order].present?
+
+        @make_data = Product.pluck(:vehicle_make).uniq
+        @color_data = Product.pluck(:color).uniq
     end
 
     def auction

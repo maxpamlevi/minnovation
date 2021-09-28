@@ -1,3 +1,5 @@
+<form method="get" action="/search">
+
 <div class="px-3 mt-3 bg">
   <div class="form-group has-search">
     <span class="fa fa-search form-control-feedback">
@@ -18,173 +20,87 @@
 </div>
 
 
-<div class='filter-dialog'>
-  <div class='content-filter-dialog'>
-    <div class='filter-icon'>
-      <div class='inner-filter-icon'>
-        <img src="/assets/setting_search" alt="">
-      </div>
-    </div>
+<div id="myModal" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
 
-    <div class="content-filter">
-      <div class="list-filters">
+      <div class="modal-body p-0">
+        <div class='filter-dialog'>
+          <div class='content-filter-dialog'>
+            <div class='filter-icon'>
+              <div class='inner-filter-icon'>
+                <img src="/assets/setting_search" alt="">
+              </div>
+            </div>
 
-        <div class="type-filter" data-type='sort_by'>
-          <div class="head-filter">
-            <p>Sort by</p>
-            <div class="icon">
-              <img src="/assets/next" alt="" srcset="">
-              <img src="/assets/next_active" alt="" srcset="">
-            </div>
-          </div>
-          <div class="list-sub-filters mt-1">
-            <p data-value='none' data-default='Sort by'>None</p>
-            <p data-value='price-ascending'>Price ascending</p>
-            <p data-value='price-descending'>Price descending</p>
-            <p data-value='product-name-ascending'>Product name ascending</p>
-            <p data-value='product-name-descending'>Product name descending</p>
-            <p data-value='store-name-ascending'>Store name ascending</p>
-            <p data-value='store-name-descending'>Store name descending</p>
-            <p data-value='upload-date-ascending'>Upload date ascending</p>
-            <p data-value='upload-date-descending'>Upload date descending</p>
-          </div>
-        </div>
+            <div class="content-filter">
+              <div class="list-filters">
 
-        <div class="type-filter" data-type='category'>
-          <div class="head-filter">
-            <p>Category</p>
-            <div class="icon">
-              <img src="/assets/next" alt="" srcset="">
-              <img src="/assets/next_active" alt="" srcset="">
-            </div>
-          </div>
-          <div class="list-sub-filters mt-1">
-            <p data-value='none' data-default='Category'>None</p>
-            <p>Price ascending</p>
-            <p>Price descending</p>
-            <p>Product name ascending</p>
-            <p>Product name descending</p>
-            <p>Store name ascending</p>
-            <p>Store name descending</p>
-            <p>Upload date ascending</p>
-            <p>Upload date descending</p>
-          </div>
-        </div>
 
-        <div class="type-filter" data-type='brand'>
-          <div class="head-filter">
-            <p>Brand</p>
-            <div class="icon">
-              <img src="/assets/next" alt="" srcset="">
-              <img src="/assets/next_active" alt="" srcset="">
-            </div>
-          </div>
-          <div class="list-sub-filters mt-1">
-            <p data-value='none' data-default='Brand'>None</p>
-            <p>Price ascending</p>
-            <p>Price descending</p>
-            <p>Product name ascending</p>
-            <p>Product name descending</p>
-            <p>Store name ascending</p>
-            <p>Store name descending</p>
-            <p>Upload date ascending</p>
-            <p>Upload date descending</p>
-          </div>
-        </div>
+                <select name="order" class="form-control my-2" id="order" style="border-radius: 10px">
+                  <option value="" selected>Sort By</option>
+                  <option value="price-asc">Price ascending</option>
+                  <option value="price-desc">Price descending</option>
+                  <option value="name-asc">Product name ascending</option>
+                  <option value="name-desc">Product name descending</option>
+                  <option value="audi">Store name ascending</option>
+                  <option value="audi">Store name descending</option>
+                  <option value="audi">Upload date ascending</option>
+                  <option value="audi">Upload date descending</option>
+                </select>
 
-        <div class="type-filter" data-type='color'>
-          <div class="head-filter">
-            <p>Color</p>
-            <div class="icon">
-              <img src="/assets/next" alt="" srcset="">
-              <img src="/assets/next_active" alt="" srcset="">
+                <select name="brand" id="" class="form-control my-2" style="border-radius: 10px">
+                  <option value="" selected>Category</option>
+                  <% @make_data.each do |make| %>
+                    <option value="<%= make %>"><%= make %></option>
+                  <% end %>
+                </select>
+
+                <select name="color" id="" class="form-control my-2" style="border-radius: 10px">
+                  <option value="">Color</option>
+                  <% @color_data.each do |color| %>
+                    <option value="<%= color %>"><%= color %></option>
+                  <% end %>
+                </select>
+              </div>
             </div>
-          </div>
-          <div class="list-sub-filters mt-1">
-            <p data-value='none' data-default='Color'>None</p>
-            <p>Price ascending</p>
-            <p>Price descending</p>
-            <p>Product name ascending</p>
-            <p>Product name descending</p>
-            <p>Store name ascending</p>
-            <p>Store name descending</p>
-            <p>Upload date ascending</p>
-            <p>Upload date descending</p>
-          </div>
-        </div>
-        <div class="type-filter" data-type='store'>
-          <div class="head-filter">
-            <p>Store</p>
-            <div class="icon">
-              <img src="/assets/next" alt="" srcset="">
-              <img src="/assets/next_active" alt="" srcset="">
+
+            <div class="price-range">
+              <p>Price range</p>
+              <input data-role="doubleslider"
+                     data-min="1000"
+                     data-max="1000000"
+                     data-accuracy="1000"
+                     data-hint-mask-min="$1$"
+                     data-hint-mask-max="$1$"
+                     data-format="money"
+                     data-hint-always="true"
+                     data-hint-position-min="bottom"
+                     data-hint-position-max="bottom"
+                     data-show-min-max="false"
+                     data-cls-backside="bg-gray"
+                     data-cls-marker="bg-green border-50 custom-marker"
+                     data-cls-hint="bg-green custom-marker shadow-2"
+                     data-cls-complete="bg-green"
+                     data-cls-min-max="text-bold">
             </div>
-          </div>
-          <div class="list-sub-filters mt-1">
-            <p data-value='none' data-default='Store'>None</p>
-            <p>Price ascending</p>
-            <p>Price descending</p>
-            <p>Product name ascending</p>
-            <p>Product name descending</p>
-            <p>Store name ascending</p>
-            <p>Store name descending</p>
-            <p>Upload date ascending</p>
-            <p>Upload date descending</p>
+            <div class="d-flex justify-content-center rating">
+              <input type="text" id="rating">
+            </div>
+            <div class="actions-dialog d-flex justify-content-around border-top mt-5">
+              <div class="border-right w-50 text-center py-3" ><button data-dismiss="modal" style="border: none; background: none">Cancel</button></div>
+              <div class="w-50 text-center py-3"><button type="submit" style="border: none; background: none">Apply</button></div>
+            </div>
           </div>
         </div>
       </div>
-
-      <div class="price-range">
-        <p>Price range</p>
-        <input data-role="doubleslider"
-        data-min="1000"
-        data-max="1000000"
-       data-accuracy="1000"
-       data-hint-mask-min="$1$"
-       data-hint-mask-max="$1$"
-       data-format="money"
-       data-hint-always="true"
-       data-hint-position-min="bottom"
-       data-hint-position-max="bottom"
-       data-show-min-max="false"
-       data-cls-backside="bg-gray"
-       data-cls-marker="bg-green border-50 custom-marker"
-       data-cls-hint="bg-green custom-marker shadow-2"
-       data-cls-complete="bg-green"
-       data-cls-min-max="text-bold">
-      </div>
-      <div class="star-rating mb-3">
-        <p class='mb-2'>Mininum Star Rating</p>
-        <div class="stars">
-          <div class="star-item" data-value='1'>
-            <img src="/assets/star" alt="" srcset="">
-            <img src="/assets/star_selected" alt="" srcset="">
-          </div>
-          <div class="star-item" data-value='2'>
-            <img src="/assets/star" alt="" srcset="">
-            <img src="/assets/star_selected" alt="" srcset="">
-          </div>
-          <div class="star-item" data-value='3'>
-            <img src="/assets/star" alt="" srcset="">
-            <img src="/assets/star_selected" alt="" srcset="">
-          </div>
-          <div class="star-item" data-value='4'>
-            <img src="/assets/star" alt="" srcset="">
-            <img src="/assets/star_selected" alt="" srcset="">
-          </div>
-          <div class="star-item" data-value='5'>
-            <img src="/assets/star" alt="" srcset="">
-            <img src="/assets/star_selected" alt="" srcset="">
-          </div>
-        </div>
-      </div>
-      <div class="actions-dialog">
-        <div><span>Cancel</span></div>
-        <div><span>Apply</span></div>
       </div>
     </div>
   </div>
 </div>
+
+</form>
+
 
 <script>
   var filter_dialog = $('.filter-dialog');
@@ -195,78 +111,23 @@
   var filter_store = 'none';
 
   $('.filter-search').on('click',function() {
-      filter_dialog.toggleClass('open');
+    $('#myModal').modal('show')
   });
   $('.type-filter').on('click', function() {
     $(this).toggleClass('open');
   });
-  $('.list-sub-filters > p').on('click', function(e) {
-    e.stopPropagation();
-    $(this).parent().parent().removeClass('open');
-    let selectedValue = $(this).data('value');
-    const type = $(this).parent().parent().data('type');
-    if (selectedValue == 'none') {
-      $(this).parent().parent().find('div.head-filter').removeClass('active');
-      $(this).parent().parent().find('div.head-filter > p').text($(this).data('default'));
-    } else {
-      $(this).parent().parent().find('div.head-filter').addClass('active');
-      $(this).parent().parent().find('div.head-filter > p').text($(this).text());
-    }
-    if(selectedValue == 'none') {
-      if (type == 'sort_by') {
-        filter_sort_by = 'none';
-      }
-      if (type == 'category') {
-        filter_category = 'none';
-      }
-      if (type == 'brand') {
-        filter_brand = 'none';
-      }
-      if (type == 'color') {
-        filter_color = 'none';
-      }
-      if (type == 'store') {
-        filter_store = 'none';
-      }
-    } else {
-      if (type == 'sort_by') {
-        filter_sort_by = selectedValue;
-      }
-      if (type == 'category') {
-        filter_category = selectedValue;
-      }
-      if (type == 'brand') {
-        filter_brand = selectedValue;
-      }
-      if (type == 'color') {
-        filter_color = selectedValue;
-      }
-      if (type == 'store') {
-        filter_store = selectedValue;
-      }
-    }
-  });
 
-  $('.actions-dialog > div:first-child').on('click', function() {
-    filter_dialog.removeClass('open');
-  });
-  $('.actions-dialog > div:last-child').on('click', function() {
-    filter_dialog.removeClass('open');
-    if (filter_sort_by != 'none' || filter_category != 'none' || filter_brand != 'none' || filter_color != 'none' || filter_store != 'none') {
-      $('.filter-search').addClass('active');
-    } else {
-      $('.filter-search').removeClass('active');
-    }
-  });
+$(document).ready(function (){
+  $('#rating').rating();
 
-  $('.filter-dialog .stars > .star-item').click(function() {
-    const num_star = $(this).data('value');
-    $.each($('.filter-dialog .stars > .star-item'), function(idx, item) {
-      if (idx < num_star) {
-        $(item).addClass('active');
-      } else {
-        $(item).removeClass('active');
-      }
-    });
-  });
+})
 </script>
+
+<style>
+  .stars li.on {
+    color: #F6C358 !important;
+  }
+  .stars li{
+    padding-left: 5px !important;
+  }
+</style>

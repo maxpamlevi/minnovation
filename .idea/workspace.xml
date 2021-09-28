@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98408259-74cf-4572-8de2-2bfe4424b327" name="Default Changelist" comment="" />
+    <list default="true" id="98408259-74cf-4572-8de2-2bfe4424b327" name="Default Changelist" comment="update">
+      <change beforePath="$PROJECT_DIR$/.idea/minnovation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/minnovation.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/shopping.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/shopping.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/_search.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_search.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +32,9 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
+  </component>
   <component name="ProjectId" id="1xZDGQVoDgu9az9brS39vVG7jhR" />
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
@@ -36,7 +46,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/assets/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="yarn" />
   </component>
   <component name="RecentsManager">
@@ -173,6 +183,9 @@
       <workItem from="1631343594453" duration="157000" />
       <workItem from="1631411057264" duration="4853000" />
       <workItem from="1631925306312" duration="635000" />
+      <workItem from="1632790605236" duration="27000" />
+      <workItem from="1632813138879" duration="4159000" />
+      <workItem from="1632817870100" duration="1940000" />
     </task>
     <task id="LOCAL-00001" summary="update UI">
       <created>1631110874537</created>
@@ -226,7 +239,21 @@
     <MESSAGE value="update" />
     <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/controllers/home_controller.rb</url>
+          <line>25</line>
+          <properties myBlockOrdinal="-1">
+            <option name="block-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/minnovation@Development__minnovation.rcov" NAME="Development: minnovation Coverage Results" MODIFIED="1632129571265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="minnovation" />
+    <SUITE FILE_PATH="coverage/minnovation@Development__minnovation.rcov" NAME="Development: minnovation Coverage Results" MODIFIED="1632817874545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="minnovation" />
   </component>
 </project>

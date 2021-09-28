@@ -9,7 +9,7 @@
           fill="#A7A7A7" />
       </svg>
     </span>
-    <input type="text" class="form-control" placeholder="Search" style="border-radius: 16px" name="keyword">
+    <input type="text" value="<%= params[:keyword] %>" class="form-control" placeholder="Search" style="border-radius: 16px" name="keyword">
     <div class="filter-search">
       <div class="icon">
         <img src="/assets/filter_search" alt="" srcset="">
@@ -39,17 +39,17 @@
 
                 <select name="order" class="form-control my-2" id="order" style="border-radius: 10px">
                   <option value="" selected>Sort By</option>
-                  <option value="price-asc">Price ascending</option>
-                  <option value="price-desc">Price descending</option>
-                  <option value="name-asc">Product name ascending</option>
-                  <option value="name-desc">Product name descending</option>
+                  <option value="price asc">Price ascending</option>
+                  <option value="price desc">Price descending</option>
+                  <option value="name asc">Product name ascending</option>
+                  <option value="name desc">Product name descending</option>
                   <option value="audi">Store name ascending</option>
                   <option value="audi">Store name descending</option>
-                  <option value="audi">Upload date ascending</option>
-                  <option value="audi">Upload date descending</option>
+                  <option value="create_at asc">Upload date ascending</option>
+                  <option value="create_at desc">Upload date descending</option>
                 </select>
 
-                <select name="brand" id="" class="form-control my-2" style="border-radius: 10px">
+                <select name="vehicle_make" id="" class="form-control my-2" style="border-radius: 10px">
                   <option value="" selected>Category</option>
                   <% @make_data.each do |make| %>
                     <option value="<%= make %>"><%= make %></option>
@@ -66,8 +66,8 @@
             </div>
 
             <div class="price-range">
-              <p>Price range</p>
-              <input data-role="doubleslider"
+              <p>Price</p>
+              <input name="range" data-role="doubleslider"
                      data-min="1000"
                      data-max="1000000"
                      data-accuracy="1000"
@@ -84,11 +84,14 @@
                      data-cls-complete="bg-green"
                      data-cls-min-max="text-bold">
             </div>
+            <div>
+              Minimum Star Rating
+            </div>
             <div class="d-flex justify-content-center rating">
               <input type="text" id="rating">
             </div>
             <div class="actions-dialog d-flex justify-content-around border-top mt-5">
-              <div class="border-right w-50 text-center py-3" ><button data-dismiss="modal" style="border: none; background: none">Cancel</button></div>
+              <div class="border-right w-50 text-center py-3" ><button data-dismiss="modal" type="button" style="border: none; background: none">Cancel</button></div>
               <div class="w-50 text-center py-3"><button type="submit" style="border: none; background: none">Apply</button></div>
             </div>
           </div>

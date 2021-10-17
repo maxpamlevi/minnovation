@@ -46,4 +46,9 @@ class HomeController < ApplicationController
         @new_products = Product.where('thumbnail like "%drive%"').where(state: 0)
         @sale_products = Product.where('thumbnail like "%drive%"').where('discount > 0').order(:created_at)
     end
+
+    def growth
+
+    end
+
 end

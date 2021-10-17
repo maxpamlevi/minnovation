@@ -1,13 +1,17 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-bar-rating/1.2.2/jquery.barrating.min.js" integrity="sha512-nUuQ/Dau+I/iyRH0p9sp2CpKY9zrtMQvDUG7iiVY8IBMj8ZL45MnONMbgfpFAdIDb7zS5qEJ7S056oE7f+mCXw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-bar-rating/1.2.2/themes/css-stars.min.css" integrity="sha512-Epht+5WVzDSqn0LwlaQm6dpiVhajT713iLdBEr3NLbKYsiVB2RiN9kLlrR0orcvaKSbRoZ/qYYsmN1vk/pKSBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-bar-rating/1.2.2/themes/fontawesome-stars.min.css" integrity="sha512-UvAQolpyYameV9OFfNVAstakl6LZLNL8BYGsgaM8aO1t19TVY3VYwbcib0DyrvuIwaTt9va5yR5kOZs7hdZK0A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <form method="get" action="/search">
 
 <div class="px-3 mt-3 bg">
   <div class="form-group has-search">
     <span class="fa fa-search form-control-feedback">
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M11.742 10.344C12.7103 9.02269 13.144 7.38449 12.9563 5.75715C12.7686 4.12981 11.9734 2.63334 10.7298 1.56713C9.48613 0.500922 7.88576 -0.0563951 6.24885 0.00667803C4.61194 0.0697512 3.0592 0.748563 1.90128 1.90731C0.743364 3.06605 0.0656633 4.61928 0.00376152 6.25624C-0.0581403 7.89319 0.500322 9.49316 1.56742 10.736C2.63452 11.9789 4.13156 12.7731 5.75903 12.9596C7.38651 13.1461 9.02439 12.7112 10.345 11.742H10.344C10.374 11.782 10.406 11.82 10.442 11.857L14.292 15.707C14.4795 15.8946 14.7339 16.0001 14.9992 16.0002C15.2644 16.0003 15.5189 15.895 15.7065 15.7075C15.8942 15.52 15.9996 15.2656 15.9997 15.0004C15.9998 14.7351 15.8945 14.4806 15.707 14.293L11.857 10.443C11.8213 10.4068 11.7828 10.3734 11.742 10.343V10.344ZM12 6.5C12 7.22227 11.8578 7.93747 11.5814 8.60476C11.3049 9.27205 10.8998 9.87837 10.3891 10.3891C9.87838 10.8998 9.27206 11.3049 8.60477 11.5813C7.93748 11.8577 7.22228 12 6.50001 12C5.77774 12 5.06254 11.8577 4.39525 11.5813C3.72796 11.3049 3.12165 10.8998 2.61093 10.3891C2.1002 9.87837 1.69508 9.27205 1.41868 8.60476C1.14227 7.93747 1.00001 7.22227 1.00001 6.5C1.00001 5.04131 1.57948 3.64236 2.61093 2.61091C3.64238 1.57946 5.04132 1 6.50001 1C7.9587 1 9.35765 1.57946 10.3891 2.61091C11.4206 3.64236 12 5.04131 12 6.5Z"
-          fill="#A7A7A7" />
-      </svg>
+<!--      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--        <path-->
+<!--          d="M11.742 10.344C12.7103 9.02269 13.144 7.38449 12.9563 5.75715C12.7686 4.12981 11.9734 2.63334 10.7298 1.56713C9.48613 0.500922 7.88576 -0.0563951 6.24885 0.00667803C4.61194 0.0697512 3.0592 0.748563 1.90128 1.90731C0.743364 3.06605 0.0656633 4.61928 0.00376152 6.25624C-0.0581403 7.89319 0.500322 9.49316 1.56742 10.736C2.63452 11.9789 4.13156 12.7731 5.75903 12.9596C7.38651 13.1461 9.02439 12.7112 10.345 11.742H10.344C10.374 11.782 10.406 11.82 10.442 11.857L14.292 15.707C14.4795 15.8946 14.7339 16.0001 14.9992 16.0002C15.2644 16.0003 15.5189 15.895 15.7065 15.7075C15.8942 15.52 15.9996 15.2656 15.9997 15.0004C15.9998 14.7351 15.8945 14.4806 15.707 14.293L11.857 10.443C11.8213 10.4068 11.7828 10.3734 11.742 10.343V10.344ZM12 6.5C12 7.22227 11.8578 7.93747 11.5814 8.60476C11.3049 9.27205 10.8998 9.87837 10.3891 10.3891C9.87838 10.8998 9.27206 11.3049 8.60477 11.5813C7.93748 11.8577 7.22228 12 6.50001 12C5.77774 12 5.06254 11.8577 4.39525 11.5813C3.72796 11.3049 3.12165 10.8998 2.61093 10.3891C2.1002 9.87837 1.69508 9.27205 1.41868 8.60476C1.14227 7.93747 1.00001 7.22227 1.00001 6.5C1.00001 5.04131 1.57948 3.64236 2.61093 2.61091C3.64238 1.57946 5.04132 1 6.50001 1C7.9587 1 9.35765 1.57946 10.3891 2.61091C11.4206 3.64236 12 5.04131 12 6.5Z"-->
+<!--          fill="#A7A7A7" />-->
+<!--      </svg>-->
     </span>
     <input type="text" value="<%= params[:keyword] %>" class="form-control" placeholder="Search" style="border-radius: 16px" name="keyword">
     <div class="filter-search">
@@ -62,38 +66,65 @@
                     <option value="<%= color %>"><%= color %></option>
                   <% end %>
                 </select>
+
+                <select name="country" id="country" class="form-control my-2" style="border-radius: 10px">
+                  <option value="">Country</option>
+
+                </select>
               </div>
             </div>
 
-            <div class="price-range">
-              <p>Price</p>
-              <input name="range" data-role="doubleslider"
-                     data-min="1000"
-                     data-max="1000000"
-                     data-accuracy="1000"
-                     data-hint-mask-min="$1$"
-                     data-hint-mask-max="$1$"
-                     data-format="money"
-                     data-hint-always="true"
-                     data-hint-position-min="bottom"
-                     data-hint-position-max="bottom"
-                     data-show-min-max="false"
-                     data-cls-backside="bg-gray"
-                     data-cls-marker="bg-green border-50 custom-marker"
-                     data-cls-hint="bg-green custom-marker shadow-2"
-                     data-cls-complete="bg-green"
-                     data-cls-min-max="text-bold">
-            </div>
-            <div>
+            <div class="price-rangeee pt-0" style="padding: 10px">
+              <div>Price</div>
+              <div slider id="slider-distance">
+                <div>
+                  <div inverse-left style="width:70%;"></div>
+                  <div inverse-right style="width:70%;"></div>
+                  <div range style="left:30%;right:40%;"></div>
+                  <span thumb style="left:30%;"></span>
+                  <span thumb style="left:60%;"></span>
+                  <div sign class="d-none" style="left:30%;">
+                  </div>
+                  <div sign class="d-none" style="left:60%;">
+                  </div>
+                </div>
+                <input type="range" tabindex="0" value="30" max="100" min="0" step="1" oninput="
+                this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
+                  var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+                  var children = this.parentNode.childNodes[1].childNodes;
+                  children[1].style.width=value+'%';
+                  children[5].style.left=value+'%';
+                  children[7].style.left=value+'%';children[11].style.left=value+'%';
+                  children[11].childNodes[1].innerHTML=this.value;" />
+
+                <input type="range" tabindex="0" value="60" max="100" min="0" step="1" oninput="
+                this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
+                  var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+                  var children = this.parentNode.childNodes[1].childNodes;
+                  children[3].style.width=(100-value)+'%';
+                  children[5].style.right=(100-value)+'%';
+                  children[9].style.left=value+'%';children[13].style.left=value+'%';
+                  children[13].childNodes[1].innerHTML=this.value;" />
+              </div>
+              <div class="d-flex justify-content-between "style="padding-left: 9px ; padding-right: 9px">
+                <span>2.000$</span>
+                <span>250.000$</span>
+              </div>
+            <div style="padding-top: 10px">
               Minimum Star Rating
             </div>
-            <div class="d-flex justify-content-center rating">
-              <input type="text" id="rating">
+            <div class="d-flex justify-content-center rating" style="padding-top: 10px">
+              <select id="example">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
             </div>
-            <div class="actions-dialog d-flex justify-content-around border-top mt-5">
-              <div class="border-right w-50 text-center py-3" ><button data-dismiss="modal" type="button" style="border: none; background: none">Cancel</button></div>
+            <div class="actions-dialog d-flex justify-content-around border-top mt-3">
+              <div class="border-right w-50 text-center py-3" ><button id="close" data-dismiss="modal" type="button" style="border: none; background: none">Cancel</button></div>
               <div class="w-50 text-center py-3"><button type="submit" style="border: none; background: none">Apply</button></div>
-
             </div>
           </div>
         </div>
@@ -121,17 +152,452 @@
     $(this).toggleClass('open');
   });
 
-$(document).ready(function (){
-  $('#rating').rating();
 
-})
+  var arr = [
+    {"name": "Afghanistan", "code": "AF"},
+    {"name": "Åland Islands", "code": "AX"},
+    {"name": "Albania", "code": "AL"},
+    {"name": "Algeria", "code": "DZ"},
+    {"name": "American Samoa", "code": "AS"},
+    {"name": "AndorrA", "code": "AD"},
+    {"name": "Angola", "code": "AO"},
+    {"name": "Anguilla", "code": "AI"},
+    {"name": "Antarctica", "code": "AQ"},
+    {"name": "Antigua and Barbuda", "code": "AG"},
+    {"name": "Argentina", "code": "AR"},
+    {"name": "Armenia", "code": "AM"},
+    {"name": "Aruba", "code": "AW"},
+    {"name": "Australia", "code": "AU"},
+    {"name": "Austria", "code": "AT"},
+    {"name": "Azerbaijan", "code": "AZ"},
+    {"name": "Bahamas", "code": "BS"},
+    {"name": "Bahrain", "code": "BH"},
+    {"name": "Bangladesh", "code": "BD"},
+    {"name": "Barbados", "code": "BB"},
+    {"name": "Belarus", "code": "BY"},
+    {"name": "Belgium", "code": "BE"},
+    {"name": "Belize", "code": "BZ"},
+    {"name": "Benin", "code": "BJ"},
+    {"name": "Bermuda", "code": "BM"},
+    {"name": "Bhutan", "code": "BT"},
+    {"name": "Bolivia", "code": "BO"},
+    {"name": "Bosnia and Herzegovina", "code": "BA"},
+    {"name": "Botswana", "code": "BW"},
+    {"name": "Bouvet Island", "code": "BV"},
+    {"name": "Brazil", "code": "BR"},
+    {"name": "British Indian Ocean Territory", "code": "IO"},
+    {"name": "Brunei Darussalam", "code": "BN"},
+    {"name": "Bulgaria", "code": "BG"},
+    {"name": "Burkina Faso", "code": "BF"},
+    {"name": "Burundi", "code": "BI"},
+    {"name": "Cambodia", "code": "KH"},
+    {"name": "Cameroon", "code": "CM"},
+    {"name": "Canada", "code": "CA"},
+    {"name": "Cape Verde", "code": "CV"},
+    {"name": "Cayman Islands", "code": "KY"},
+    {"name": "Central African Republic", "code": "CF"},
+    {"name": "Chad", "code": "TD"},
+    {"name": "Chile", "code": "CL"},
+    {"name": "China", "code": "CN"},
+    {"name": "Christmas Island", "code": "CX"},
+    {"name": "Cocos (Keeling) Islands", "code": "CC"},
+    {"name": "Colombia", "code": "CO"},
+    {"name": "Comoros", "code": "KM"},
+    {"name": "Congo", "code": "CG"},
+    {"name": "Congo, The Democratic Republic of the", "code": "CD"},
+    {"name": "Cook Islands", "code": "CK"},
+    {"name": "Costa Rica", "code": "CR"},
+    {"name": "Croatia", "code": "HR"},
+    {"name": "Cuba", "code": "CU"},
+    {"name": "Cyprus", "code": "CY"},
+    {"name": "Czech Republic", "code": "CZ"},
+    {"name": "Denmark", "code": "DK"},
+    {"name": "Djibouti", "code": "DJ"},
+    {"name": "Dominica", "code": "DM"},
+    {"name": "Dominican Republic", "code": "DO"},
+    {"name": "Ecuador", "code": "EC"},
+    {"name": "Egypt", "code": "EG"},
+    {"name": "El Salvador", "code": "SV"},
+    {"name": "Equatorial Guinea", "code": "GQ"},
+    {"name": "Eritrea", "code": "ER"},
+    {"name": "Estonia", "code": "EE"},
+    {"name": "Ethiopia", "code": "ET"},
+    {"name": "Falkland Islands (Malvinas)", "code": "FK"},
+    {"name": "Faroe Islands", "code": "FO"},
+    {"name": "Fiji", "code": "FJ"},
+    {"name": "Finland", "code": "FI"},
+    {"name": "France", "code": "FR"},
+    {"name": "French Guiana", "code": "GF"},
+    {"name": "French Polynesia", "code": "PF"},
+    {"name": "French Southern Territories", "code": "TF"},
+    {"name": "Gabon", "code": "GA"},
+    {"name": "Gambia", "code": "GM"},
+    {"name": "Georgia", "code": "GE"},
+    {"name": "Germany", "code": "DE"},
+    {"name": "Ghana", "code": "GH"},
+    {"name": "Gibraltar", "code": "GI"},
+    {"name": "Greece", "code": "GR"},
+    {"name": "Greenland", "code": "GL"},
+    {"name": "Grenada", "code": "GD"},
+    {"name": "Guadeloupe", "code": "GP"},
+    {"name": "Guam", "code": "GU"},
+    {"name": "Guatemala", "code": "GT"},
+    {"name": "Guernsey", "code": "GG"},
+    {"name": "Guinea", "code": "GN"},
+    {"name": "Guinea-Bissau", "code": "GW"},
+    {"name": "Guyana", "code": "GY"},
+    {"name": "Haiti", "code": "HT"},
+    {"name": "Heard Island and Mcdonald Islands", "code": "HM"},
+    {"name": "Holy See (Vatican City State)", "code": "VA"},
+    {"name": "Honduras", "code": "HN"},
+    {"name": "Hong Kong", "code": "HK"},
+    {"name": "Hungary", "code": "HU"},
+    {"name": "Iceland", "code": "IS"},
+    {"name": "India", "code": "IN"},
+    {"name": "Indonesia", "code": "ID"},
+    {"name": "Iran, Islamic Republic Of", "code": "IR"},
+    {"name": "Iraq", "code": "IQ"},
+    {"name": "Ireland", "code": "IE"},
+    {"name": "Isle of Man", "code": "IM"},
+    {"name": "Israel", "code": "IL"},
+    {"name": "Italy", "code": "IT"},
+    {"name": "Jamaica", "code": "JM"},
+    {"name": "Japan", "code": "JP"},
+    {"name": "Jersey", "code": "JE"},
+    {"name": "Jordan", "code": "JO"},
+    {"name": "Kazakhstan", "code": "KZ"},
+    {"name": "Kenya", "code": "KE"},
+    {"name": "Kiribati", "code": "KI"},
+    {"name": "Korea, Republic of", "code": "KR"},
+    {"name": "Kuwait", "code": "KW"},
+    {"name": "Kyrgyzstan", "code": "KG"},
+    {"name": "Latvia", "code": "LV"},
+    {"name": "Lebanon", "code": "LB"},
+    {"name": "Lesotho", "code": "LS"},
+    {"name": "Liberia", "code": "LR"},
+    {"name": "Libyan Arab Jamahiriya", "code": "LY"},
+    {"name": "Liechtenstein", "code": "LI"},
+    {"name": "Lithuania", "code": "LT"},
+    {"name": "Luxembourg", "code": "LU"},
+    {"name": "Macao", "code": "MO"},
+    {"name": "Macedonia, The Former Yugoslav Republic of", "code": "MK"},
+    {"name": "Madagascar", "code": "MG"},
+    {"name": "Malawi", "code": "MW"},
+    {"name": "Malaysia", "code": "MY"},
+    {"name": "Maldives", "code": "MV"},
+    {"name": "Mali", "code": "ML"},
+    {"name": "Malta", "code": "MT"},
+    {"name": "Marshall Islands", "code": "MH"},
+    {"name": "Martinique", "code": "MQ"},
+    {"name": "Mauritania", "code": "MR"},
+    {"name": "Mauritius", "code": "MU"},
+    {"name": "Mayotte", "code": "YT"},
+    {"name": "Mexico", "code": "MX"},
+    {"name": "Micronesia, Federated States of", "code": "FM"},
+    {"name": "Moldova, Republic of", "code": "MD"},
+    {"name": "Monaco", "code": "MC"},
+    {"name": "Mongolia", "code": "MN"},
+    {"name": "Montserrat", "code": "MS"},
+    {"name": "Morocco", "code": "MA"},
+    {"name": "Mozambique", "code": "MZ"},
+    {"name": "Myanmar", "code": "MM"},
+    {"name": "Namibia", "code": "NA"},
+    {"name": "Nauru", "code": "NR"},
+    {"name": "Nepal", "code": "NP"},
+    {"name": "Netherlands", "code": "NL"},
+    {"name": "Netherlands Antilles", "code": "AN"},
+    {"name": "New Caledonia", "code": "NC"},
+    {"name": "New Zealand", "code": "NZ"},
+    {"name": "Nicaragua", "code": "NI"},
+    {"name": "Niger", "code": "NE"},
+    {"name": "Nigeria", "code": "NG"},
+    {"name": "Niue", "code": "NU"},
+    {"name": "Norfolk Island", "code": "NF"},
+    {"name": "Northern Mariana Islands", "code": "MP"},
+    {"name": "Norway", "code": "NO"},
+    {"name": "Oman", "code": "OM"},
+    {"name": "Pakistan", "code": "PK"},
+    {"name": "Palau", "code": "PW"},
+    {"name": "Palestinian Territory, Occupied", "code": "PS"},
+    {"name": "Panama", "code": "PA"},
+    {"name": "Papua New Guinea", "code": "PG"},
+    {"name": "Paraguay", "code": "PY"},
+    {"name": "Peru", "code": "PE"},
+    {"name": "Philippines", "code": "PH"},
+    {"name": "Pitcairn", "code": "PN"},
+    {"name": "Poland", "code": "PL"},
+    {"name": "Portugal", "code": "PT"},
+    {"name": "Puerto Rico", "code": "PR"},
+    {"name": "Qatar", "code": "QA"},
+    {"name": "Reunion", "code": "RE"},
+    {"name": "Romania", "code": "RO"},
+    {"name": "Russian Federation", "code": "RU"},
+    {"name": "RWANDA", "code": "RW"},
+    {"name": "Saint Helena", "code": "SH"},
+    {"name": "Saint Kitts and Nevis", "code": "KN"},
+    {"name": "Saint Lucia", "code": "LC"},
+    {"name": "Saint Pierre and Miquelon", "code": "PM"},
+    {"name": "Saint Vincent and the Grenadines", "code": "VC"},
+    {"name": "Samoa", "code": "WS"},
+    {"name": "San Marino", "code": "SM"},
+    {"name": "Sao Tome and Principe", "code": "ST"},
+    {"name": "Saudi Arabia", "code": "SA"},
+    {"name": "Senegal", "code": "SN"},
+    {"name": "Serbia and Montenegro", "code": "CS"},
+    {"name": "Seychelles", "code": "SC"},
+    {"name": "Sierra Leone", "code": "SL"},
+    {"name": "Singapore", "code": "SG"},
+    {"name": "Slovakia", "code": "SK"},
+    {"name": "Slovenia", "code": "SI"},
+    {"name": "Solomon Islands", "code": "SB"},
+    {"name": "Somalia", "code": "SO"},
+    {"name": "South Africa", "code": "ZA"},
+    {"name": "South Georgia and the South Sandwich Islands", "code": "GS"},
+    {"name": "Spain", "code": "ES"},
+    {"name": "Sri Lanka", "code": "LK"},
+    {"name": "Sudan", "code": "SD"},
+    {"name": "Suriname", "code": "SR"},
+    {"name": "Svalbard and Jan Mayen", "code": "SJ"},
+    {"name": "Swaziland", "code": "SZ"},
+    {"name": "Sweden", "code": "SE"},
+    {"name": "Switzerland", "code": "CH"},
+    {"name": "Syrian Arab Republic", "code": "SY"},
+    {"name": "Taiwan, Province of China", "code": "TW"},
+    {"name": "Tajikistan", "code": "TJ"},
+    {"name": "Tanzania, United Republic of", "code": "TZ"},
+    {"name": "Thailand", "code": "TH"},
+    {"name": "Timor-Leste", "code": "TL"},
+    {"name": "Togo", "code": "TG"},
+    {"name": "Tokelau", "code": "TK"},
+    {"name": "Tonga", "code": "TO"},
+    {"name": "Trinidad and Tobago", "code": "TT"},
+    {"name": "Tunisia", "code": "TN"},
+    {"name": "Turkey", "code": "TR"},
+    {"name": "Turkmenistan", "code": "TM"},
+    {"name": "Turks and Caicos Islands", "code": "TC"},
+    {"name": "Tuvalu", "code": "TV"},
+    {"name": "Uganda", "code": "UG"},
+    {"name": "Ukraine", "code": "UA"},
+    {"name": "United Arab Emirates", "code": "AE"},
+    {"name": "United Kingdom", "code": "GB"},
+    {"name": "United States", "code": "US"},
+    {"name": "United States Minor Outlying Islands", "code": "UM"},
+    {"name": "Uruguay", "code": "UY"},
+    {"name": "Uzbekistan", "code": "UZ"},
+    {"name": "Vanuatu", "code": "VU"},
+    {"name": "Venezuela", "code": "VE"},
+    {"name": "Viet Nam", "code": "VN"},
+    {"name": "Virgin Islands, British", "code": "VG"},
+    {"name": "Virgin Islands, U.S.", "code": "VI"},
+    {"name": "Wallis and Futuna", "code": "WF"},
+    {"name": "Western Sahara", "code": "EH"},
+    {"name": "Yemen", "code": "YE"},
+    {"name": "Zambia", "code": "ZM"},
+    {"name": "Zimbabwe", "code": "ZW"}
+  ]
+
+  arr.forEach(function (e){
+    $('#country').append("<option value="+e.name+">"+e.name+"</option>")
+  })
+
+  $(function() {
+    $('#example').barrating({
+      theme: 'fontawesome-stars'
+    });
+  });
+
+  $('#close').click(function (){
+    $('#myModal').modal('hide')
+  })
+
 </script>
 
 <style>
+
+  .br-theme-fontawesome-stars .br-widget a{
+    padding: 3px;
+  }
+
   .stars li.on {
     color: #F6C358 !important;
   }
   .stars li{
     padding-left: 5px !important;
+  }
+
+
+  [slider] {
+    position: relative;
+    height: 14px;
+    border-radius: 10px;
+    text-align: left;
+    margin: 8px 0 10px 0;
+  }
+
+  [slider] > div {
+    position: absolute;
+    left: 13px;
+    right: 15px;
+    height: 14px;
+  }
+
+  [slider] > div > [inverse-left] {
+    position: absolute;
+    left: 0;
+    height: 14px;
+    border-radius: 10px;
+    background-color: #CCC;
+    margin: 0 7px;
+  }
+
+  [slider] > div > [inverse-right] {
+    position: absolute;
+    right: 0;
+    height: 14px;
+    border-radius: 10px;
+    background-color: #CCC;
+    margin: 0 7px;
+  }
+
+  [slider] > div > [range] {
+    position: absolute;
+    left: 0;
+    height: 14px;
+    border-radius: 14px;
+    background-color: #1ABC9C;
+  }
+
+  [slider] > div > [thumb] {
+    position: absolute;
+    top: -7px;
+    z-index: 2;
+    height: 28px;
+    width: 28px;
+    text-align: left;
+    margin-left: -11px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+    background-color: #FFF;
+    border-radius: 50%;
+    outline: none;
+  }
+
+  [slider] > input[type=range] {
+    position: absolute;
+    pointer-events: none;
+    -webkit-appearance: none;
+    z-index: 3;
+    height: 14px;
+    top: -2px;
+    width: 100%;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    opacity: 0;
+  }
+
+  div[slider] > input[type=range]::-ms-track {
+    -webkit-appearance: none;
+    background: transparent;
+    color: transparent;
+  }
+
+  div[slider] > input[type=range]::-moz-range-track {
+    -moz-appearance: none;
+    background: transparent;
+    color: transparent;
+  }
+
+  div[slider] > input[type=range]:focus::-webkit-slider-runnable-track {
+    background: transparent;
+    border: transparent;
+  }
+
+  div[slider] > input[type=range]:focus {
+    outline: none;
+  }
+
+  div[slider] > input[type=range]::-ms-thumb {
+    pointer-events: all;
+    width: 28px;
+    height: 28px;
+    border-radius: 0px;
+    border: 0 none;
+    background: red;
+  }
+
+  div[slider] > input[type=range]::-moz-range-thumb {
+    pointer-events: all;
+    width: 28px;
+    height: 28px;
+    border-radius: 0px;
+    border: 0 none;
+    background: red;
+  }
+
+  div[slider] > input[type=range]::-webkit-slider-thumb {
+    pointer-events: all;
+    width: 28px;
+    height: 28px;
+    border-radius: 0px;
+    border: 0 none;
+    background: red;
+    -webkit-appearance: none;
+  }
+
+  div[slider] > input[type=range]::-ms-fill-lower {
+    background: transparent;
+    border: 0 none;
+  }
+
+  div[slider] > input[type=range]::-ms-fill-upper {
+    background: transparent;
+    border: 0 none;
+  }
+
+  div[slider] > input[type=range]::-ms-tooltip {
+    display: none;
+  }
+
+  [slider] > div > [sign] {
+    opacity: 0;
+    position: absolute;
+    margin-left: -11px;
+    top: -39px;
+    z-index:3;
+    background-color: #1ABC9C;
+    color: #fff;
+    width: 28px;
+    height: 28px;
+    border-radius: 28px;
+    -webkit-border-radius: 28px;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /*[slider] > div > [sign]:after {*/
+  /*  position: absolute;*/
+  /*  content: '';*/
+  /*  left: 0;*/
+  /*  border-radius: 16px;*/
+  /*  top: 19px;*/
+  /*  border-left: 14px solid transparent;*/
+  /*  border-right: 14px solid transparent;*/
+  /*  border-top-width: 16px;*/
+  /*  border-top-style: solid;*/
+  /*  border-top-color: #1ABC9C;*/
+  /*}*/
+
+  [slider] > div > [sign] > span {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 28px;
+  }
+
+  [slider]:hover > div > [sign] {
+    opacity: 1;
   }
 </style>

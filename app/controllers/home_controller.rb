@@ -45,10 +45,14 @@ class HomeController < ApplicationController
     def store
         @new_products = Product.where('thumbnail like "%drive%"').where(state: 0)
         @sale_products = Product.where('thumbnail like "%drive%"').where('discount > 0').order(:created_at)
+
+        @make_data = Product.pluck(:vehicle_make).uniq
+        @color_data = Product.pluck(:color).uniq
     end
 
     def growth
 
     end
+
 
 end

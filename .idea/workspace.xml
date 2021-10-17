@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98408259-74cf-4572-8de2-2bfe4424b327" name="Default Changelist" comment="update">
+    <list default="true" id="98408259-74cf-4572-8de2-2bfe4424b327" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/shopping.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/shopping.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/home/search.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/search.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/_search.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_search.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/home/product.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/product.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634467616781</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="update">
+      <created>1634481894111</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1634481894111</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

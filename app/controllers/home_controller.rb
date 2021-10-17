@@ -22,6 +22,7 @@ class HomeController < ApplicationController
     end
 
     def search
+        @search = true
         @products = Product.all
         @products = @products.where("name like '%#{params[:keyword]}%' OR vehicle_make like '%#{params[:keyword]}%'") if params[:keyword].present?
 

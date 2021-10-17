@@ -16,8 +16,11 @@
     <input type="text" value="<%= params[:keyword] %>" class="form-control" placeholder="Search" style="border-radius: 16px" name="keyword">
     <div class="filter-search">
       <div class="icon">
-        <img src="/assets/filter_search" alt="" srcset="">
-        <img src="/assets/filter_search_active" alt="" srcset="">
+        <% if @search %>
+          <img src="/assets/filter_search_active" alt="" srcset="">
+        <% else %>
+          <img src="/assets/filter_search" alt="" srcset="">
+        <% end %>
       </div>
     </div>
   </div>

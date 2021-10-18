@@ -207,8 +207,10 @@ section {
 }
 .products, .tab-content {
   .product-image {
-    height: 110px;
+    height: 146px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -536,8 +538,10 @@ span {
 }
 #carouselExampleSlidesOnly {
   .product-image {
-    height: 175px;
+    height: 220px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
   }
   .carousel-control-prev-icon {
     position: absolute;

@@ -54,5 +54,9 @@ class HomeController < ApplicationController
 
     end
 
+    def auction_item
+        @product = Product.find(params[:id])
+    end
+
 
 end

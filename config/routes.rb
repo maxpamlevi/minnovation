@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'growth' => 'home#growth'
   get 'brand/:brand'   => 'home#brand'
   get 'auction'   => 'home#auction'
+  get 'item/:id'   => 'home#auction_item'
   get 'store'   => 'home#store'
   get 'search'  => 'home#search' 
 end

@@ -1,7 +1,7 @@
 <div class="product-item box-shadow radius-15">
   <div class>
     <div class='product-image'>
-      <img class="w-100" src="<%=product.link_img%>" alt="">
+      <img class="w-100" src="<%= product.link_img %>" alt="">
     </div>
 
     <div class="rating-price pt-2 pb-2">
@@ -14,12 +14,13 @@
       </div>
       <div class="auction-price">
         <div class="auction-time">
-          <div class="icon">
+          <div class="icon ">
             <img src="/assets/carbon_time.png" alt="">
           </div>
+          <span class="time pl-1 font-weight-bold"></span>
           <span><div data-role='countdown' data-hours='<%= auction.hour_auction%>>'></div></span>
         </div>
-        <span><%= number_to_currency(product.price * (100 - product.discount) / 100, precision: 0) %></span>
+        <span class="font-weight-bold"><%= number_to_currency(product.price * (100 - product.discount) / 100, precision: 0) %></span>
       </div>
     </div>
 

@@ -4,6 +4,7 @@ class Product < ApplicationRecord
     has_one :auction, dependent: :destroy
 
     def link_img
+        return if thumbnail.blank?
         id = thumbnail.split("file/d/")[1].split("/")[0]
         "https://drive.google.com/uc?export=view&id=#{id}"
     end

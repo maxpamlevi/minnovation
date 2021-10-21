@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98408259-74cf-4572-8de2-2bfe4424b327" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/javascript/packs/barrating.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/javascript/packs/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/javascript/stylesheets/font-awesome.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/home/auction.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/auction.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/_search.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_search.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +193,7 @@
       <workItem from="1634519508658" duration="39000" />
       <workItem from="1634569704777" duration="2472000" />
       <workItem from="1634607932503" duration="13000" />
-      <workItem from="1634823967926" duration="7842000" />
+      <workItem from="1634823967926" duration="8851000" />
     </task>
     <task id="LOCAL-00001" summary="update UI">
       <created>1631110874537</created>
@@ -343,7 +349,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634831599201</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="update">
+      <created>1634831838033</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1634831838033</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

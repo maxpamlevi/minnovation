@@ -6,7 +6,9 @@
   <% @auctions.each do |auction| %>
     <% next if auction.product.thumbnail.blank? %>
     <div class="col-12 px-4 py-3">
+      <a href="item/<%= auction.product.id %>">
         <%= render partial: 'shopping/auction', locals: {product: auction.product, auction: auction} %>
+      </a>
     </div>
   <% end %>
 </div>

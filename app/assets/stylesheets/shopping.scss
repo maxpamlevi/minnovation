@@ -42,7 +42,15 @@
     input.form-control {
         padding: 10px 40px;
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: #D5D6DB;
+        opacity: 1; /* Firefox */
+      }
     }
+}
+
+.banner .carousel-control-next-icon, .banner .carousel-control-prev-icon{
+  border-radius: 100% !important;
 }
 
 .filter-search {
@@ -167,6 +175,10 @@
                 min-height: 100px;
                 overflow-y: scroll;
                 padding: 10px;
+                select{
+                  height: 40px;
+                  color: #A7A7A7;
+                }
 
                 .type-filter {
                     &:not(:first-child) {

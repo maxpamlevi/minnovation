@@ -109,7 +109,7 @@ section {
 
 //////
 .product-item {
-  border-radius: 5px;
+  border-radius: 15px;
   overflow: hidden;
   border: 0.5px solid #D5D6DB !important;
   & > div {
@@ -225,6 +225,7 @@ section {
     padding: 5px;
   }
   .auction-time {
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;

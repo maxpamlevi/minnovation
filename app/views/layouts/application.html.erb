@@ -9,17 +9,17 @@
     <link  rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-    <!--Plugin CSS file with desired skin-->
-<!--    <link rel="stylesheet" href="https://streamtool.net/assets/Metro-UI-CSS-v.4.3.10/tests/metro/css/metro-all.css?ver=@@b-versionhttps://streamtool.net/assets/Metro-UI-CSS-v.4.3.10/tests/metro/css/metro-all.css?ver=@@b-version"/>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-rating/1.4.0/bootstrap-rating.min.js" integrity="sha512-w2xfH8P2mKvTWxYz1/D61aILqkZvM+AXYJ203fNUFRI81XHkKKYE0Eh+nVU5cUkgsbBQ8JRHNLgGNLujXr+2Bg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-rating/1.4.0/bootstrap-rating.css" integrity="sha512-h8Sjqjj1EuQ+r54PxvTL64cDtvLwgHH9GWaqdYVJc7MFeLYWmEBdWhz6ToFrCdZeVfFOXCrvWULAln8LhzLjOQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application'%>
+    <%= javascript_pack_tag 'global'%>
   </head>
 
   <body class=''>
@@ -30,9 +30,5 @@
     <footer class="footer">
       <%= render 'layouts/footer' %>
     </footer>
-
-    <!--Plugin JavaScript file-->
-<!--    <script src="https://streamtool.net/assets/Metro-UI-CSS-v.4.3.10/tests/metro/js/metro.js?ver=@@b-version"></script>-->
-
   </body>
 </html>

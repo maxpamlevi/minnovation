@@ -401,12 +401,13 @@
   arr.forEach(function (e){
     $('#country').append("<option value="+e.name+">"+e.name+"</option>")
   })
-
-  $(function() {
-    $('#example').barrating({
-      theme: 'fontawesome-stars'
+  $(document).ready(function (){
+    $(function() {
+      $('#example').barrating({
+        theme: 'fontawesome-stars'
+      });
     });
-  });
+  })
 
   $('#close').click(function (){
     $('#myModal').modal('hide')

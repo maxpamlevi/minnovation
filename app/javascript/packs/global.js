@@ -16,10 +16,12 @@ function startTimer(duration, display) {
   }, 1000);
 }
 
-window.onload = function () {
-  var fiveMinutes = 60 * 5,
-    display = $('.time');
-  display.each(function (display){
-    startTimer(fiveMinutes, $(this));
+  $(function (){
+    var fiveMinutes = 60 * 5,
+      display = $('.time');
+    if (display.length){
+      display.each(function (aa){
+        startTimer(fiveMinutes, $(this));
+      })
+    }
   })
-};

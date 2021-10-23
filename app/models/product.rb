@@ -6,13 +6,13 @@ class Product < ApplicationRecord
     def link_img
         return if thumbnail.blank?
         id = thumbnail.split("file/d/")[1].split("/")[0]
-        "https://drive.google.com/uc?export=view&id=#{id}"
+        "https://drive.google.com/uc?export=thumbnail&id=#{id}&export=download"
     end
     def logo_img
         return '/assets/porsche.png' if logo.blank?
 
         id = logo.split("file/d/")[1].split("/")[0]
-        "https://drive.google.com/uc?export=view&id=#{id}"
+        "https://drive.google.com/uc?export=thumbnail&id=#{id}&export=download"
     end
     def state_color
         return '#00BE65' if state == 0

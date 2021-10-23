@@ -11,7 +11,7 @@ import "channels"
 import "bootstrap"
 import "../stylesheets/application"
 import "jquery"
-import "@fortawesome/fontawesome-free/css/all.css";
+// import "@fortawesome/fontawesome-free/css/all.css";
 // import "jquery-bar-rating"
 
 Rails.start()

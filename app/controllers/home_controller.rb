@@ -18,7 +18,13 @@ class HomeController < ApplicationController
     end
 
     def brand
-        @products = Product.where('thumbnail like "%drive%"').where("UPPER(vehicle_make) LIKE '%#{params[:brand].upcase.squish}%' ")
+        @product = Product.where(vehicle_make: params[:brand]).first
+
+        @new_products = Product.where('thumbnail like "%drive%"').where(state: 0)
+        @sale_products = Product.where('thumbnail like "%drive%"').where('discount > 0').order(:created_at)
+
+        @make_data = Product.pluck(:vehicle_make).uniq
+        @color_data = Product.pluck(:color).uniq
     end
 
     def search

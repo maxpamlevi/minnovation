@@ -1,33 +1,30 @@
-<div class='banner' style="font-family: 'Proxima Nova', sans-serif !important;">
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-      <% 3.times.each do |e| %>
-      <div class="carousel-item <%= 'active' if e == 1 %>">
-        <img src="<%= @product.link_img %>" alt="">
-      </div>
-      <% end %>
-
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
+<div id="carouselExampleIndicators" class="carousel slide banner" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
+  <div class="carousel-inner">
+      <% 3.times.each do |e| %>
+        <div class="carousel-item <%= 'active' if e == 1 %>">
+          <img src="<%= @product.link_img %>" alt="">
+        </div>
+      <% end %>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
 </div>
 
 <div style="padding-left: 20px; padding-right: 20px">
   <div class="d-flex justify-content-between">
     <div class="font-weight-bold" style="font-size: 18px;
-    ">    <%= @product.name %></div>
+    "><%= @product.name %></div>
     <div>
       <svg width="48" height="21" viewBox="0 0 48 21" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M17.8701 2.60956C15.7988 0.53823 12.4284 0.53823 10.3571 2.60956L6.60059 6.36608L7.48453 7.24995L11.241 3.49342C12.0028 2.73156 13.0362 2.30355 14.1136 2.30355C14.6471 2.30356 15.1754 2.40864 15.6683 2.6128C16.1611 2.81696 16.609 3.1162 16.9862 3.49344C17.3635 3.87068 17.6627 4.31853 17.8669 4.81142C18.071 5.30431 18.1761 5.83258 18.1761 6.36608C18.1761 6.89957 18.071 7.42784 17.8669 7.92073C17.6627 8.41361 17.3635 8.86146 16.9862 9.2387L13.2297 12.9952L14.1134 13.8791L17.87 10.1226C19.9416 8.05124 19.9416 4.68093 17.8701 2.60956Z" fill="#27A2DB"/>
@@ -37,13 +34,28 @@
       </svg>
     </div>
   </div>
-  <div style="padding-top: 0px">
+  <div class="d-flex align-items-center pt-3">
     <div class="font-weight-bold" style="font-size: 20px;
       line-height: 24px;
-      color: #ED1C24;"><%= @product.price %> $</div>
+      color: #ED1C24;padding-right: 20px"><%= @product.price %> $
+    </div>
+    <div class="product-item" style="border: none !important;">
+      <div class="discount mt-1 padding-right-10">
+        <% if @product.discount > 0 %>
+          <span class="text-right discount-price mr-2" style="text-align: right;font-size: 17px">
+            <%= number_to_currency(@product.price, precision: 0) %>
+          </span>
+          <div class="discount-task">
+            <span style='margin-left: 5px'>-<%=@product.discount%>%</span>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="border-bottom" style="width: 135px">
+    </div>
   </div>
 </div>
-<div>
+<div class="pt-4">
   <svg width="100%" height="180" viewBox="0 0 395 180" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g filter="url(#filter0_ddd_238:356)">
       <rect x="20" y="15" width="355" height="160" rx="15" fill="white"/>

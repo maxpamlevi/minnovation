@@ -2,7 +2,6 @@
   "name": "minnovation",
   "private": true,
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.4",
     "@popperjs/core": "^2.9.3",
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
@@ -11,7 +10,6 @@
     "bootstrap": "^5.0.0-beta3",
     "ion-rangeslider": "^2.3.1",
     "jquery": "^3.6.0",
-    "jquery-bar-rating": "^1.2.2",
     "turbolinks": "^5.2.0",
     "webpack": "^4.46.0",
     "webpack-cli": "^3.3.12"

@@ -11,6 +11,7 @@ import "channels"
 import "bootstrap"
 import "../stylesheets/application"
 import "jquery"
+import "@fortawesome/fontawesome-free/css/all.css";
 
 Rails.start()
 Turbolinks.start()
@@ -21,4 +22,6 @@ $('.filter-search').on('click',function() {
     alert('test');
     filter_dialog.toggleClass('open');
 });
+
+console.log('loaded js')
 

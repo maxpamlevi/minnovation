@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98408259-74cf-4572-8de2-2bfe4424b327" name="Default Changelist" comment="update">
-      <change afterPath="$PROJECT_DIR$/app/assets/images/promotion.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/home/inventory.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/home/promotion.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/minnovation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/minnovation.iml" afterDir="false" />
+    <list default="true" id="98408259-74cf-4572-8de2-2bfe4424b327" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/home/auction.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/auction.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/home/auction_item.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/auction_item.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/home/growth.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/growth.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/home/product.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/product.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/home/promotion.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/promotion.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/home/search.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/search.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/home/shopping.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/shopping.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/home/store.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/store.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +204,8 @@
       <workItem from="1634979837970" duration="13843000" />
       <workItem from="1635001657535" duration="3727000" />
       <workItem from="1635125890017" duration="496000" />
-      <workItem from="1635159922144" duration="919000" />
+      <workItem from="1635159922144" duration="1120000" />
+      <workItem from="1635174041483" duration="1201000" />
     </task>
     <task id="LOCAL-00001" summary="update UI">
       <created>1631110874537</created>
@@ -419,7 +424,21 @@
       <option name="project" value="LOCAL" />
       <updated>1635003810877</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="update">
+      <created>1635160849122</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1635160849122</updated>
+    </task>
+    <task id="LOCAL-00033" summary="update">
+      <created>1635174595192</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1635174595192</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -444,6 +463,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/minnovation@Development__minnovation.rcov" NAME="Development: minnovation Coverage Results" MODIFIED="1635160412782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="minnovation" />
+    <SUITE FILE_PATH="coverage/minnovation@Development__minnovation.rcov" NAME="Development: minnovation Coverage Results" MODIFIED="1635174614021" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="minnovation" />
   </component>
 </project>

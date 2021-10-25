@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   get 'item/:id'   => 'home#auction_item'
   get 'store'   => 'home#store'
   get 'search'  => 'home#search' 
+  get 'inventory'  => 'home#inventory'
+  get 'promotion'  => 'home#promotion'
 end

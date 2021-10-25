@@ -1,8 +1,10 @@
 <% content_for :title, "Auction" %>
+<div class="mt-4">
+  <%= render partial: 'layouts/search' %>
 
-<%= render partial: 'layouts/search' %>
+</div>
 
-<div class="section-products row bg-white px-3 mt-2 py-4 position-relative">
+<div class="section-products row bg px-3 mt-3 position-relative">
   <% @auctions.each do |auction| %>
     <% next if auction.product.thumbnail.blank? %>
     <div class="col-12 px-4 py-3">
@@ -13,3 +15,11 @@
   <% end %>
 </div>
 
+<style>
+.section-products{
+  box-shadow: none;
+}
+.product-item > div{
+  background: #FFFFFF;
+}
+</style>

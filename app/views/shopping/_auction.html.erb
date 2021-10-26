@@ -13,14 +13,14 @@
         <div class="star"><img src="/assets/star" alt="" srcset=""></div>
       </div>
       <div class="auction-price">
-        <div class="auction-time">
+        <div class="auction-time" bg>
           <div class="icon ">
             <img src="/assets/carbon_time.png" alt="">
           </div>
           <span class="time pl-1 font-weight-bold"></span>
           <span><div data-role='countdown' data-hours='<%= auction.hour_auction%>>'></div></span>
         </div>
-        <span class="font-weight-bold"><%= number_to_currency(product.price * (100 - product.discount) / 100, precision: 0) %></span>
+        <span class="font-weight-bold" style="background: #44C4A1"><%= number_to_currency(product.price * (100 - product.discount) / 100, precision: 0) %></span>
       </div>
     </div>
 

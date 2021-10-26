@@ -122,14 +122,22 @@
   </div>
   <div class="col-12 pt-5">
   </div>
-  <div class="products mt-2">
+  <div class="products">
     <div class="row pl-3 pr-3">
-      <% @just_for_you_products.each do |product| %>
+      <% @sale_products.first.each do |product| %>
         <div class='col-6'>
           <%= render partial: 'shopping/product', locals: {product: product} %>
         </div>
       <% end %>
+      <% @sale_products.last.each do |product| %>
+        <div class='col-6 mt-3 hide-prod-item d-none'>
+          <%= render partial: 'shopping/product', locals: {product: product} %>
+        </div>
+      <% end %>
     </div>
+  </div>
+  <div class="more mt-3">
+    <span class="show-more-btn">More</span>
   </div>
 </div>
 

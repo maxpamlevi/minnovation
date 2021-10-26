@@ -10,7 +10,7 @@ class HomeController < ApplicationController
     def shopping
         @new_products = Product.where('thumbnail like "%drive%"').where(state: 0).limit(4).each_slice(2).to_a
         @sale_products = Product.where('thumbnail like "%drive%"').where('discount > 0').order(:created_at).limit(4).each_slice(2).to_a
-        @just_for_you_products = Product.where('thumbnail like "%drive%"').order('RAND()').limit(2)
+        @just_for_you_products = Product.where('thumbnail like "%drive%"').order('RAND()').limit(4)
         @best_buy_product = Product.where('thumbnail like "%drive%"').order('RAND()').limit(3)
 
         @make_data = Product.all.pluck(:vehicle_make).uniq
@@ -49,7 +49,12 @@ class HomeController < ApplicationController
     end
 
     def store
-        @check = true
+        if params[:brand].present?
+            @check = false
+            @product = Product.where(vehicle_make: params[:brand]).first
+        else
+            @check = true
+        end
         @new_products = Product.where('thumbnail like "%drive%"').where(state: 0)
         @sale_products = Product.where('thumbnail like "%drive%"').where('discount > 0').order(:created_at)
 

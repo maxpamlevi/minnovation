@@ -1,4 +1,5 @@
 //= require websocket_rails/main
+//= require turbolinks
 
 $(document).ready(function() {
     alert('come here');

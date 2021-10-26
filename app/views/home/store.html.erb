@@ -3,10 +3,14 @@
 <div class="store-top-layout p-3">
     <div class="info-store">
         <div class="logo-store">
+          <% if @product.present? %>
+            <img src="<%= @product.logo_img %>" alt="" style="width: 50px">
+          <% else %>
             <img src="/assets/motorist" alt="">
+          <% end %>
         </div>
         <div class="title-store pl-2 pr-2">
-            <p class="name-store mt-0 mb-0">Motorist</p>
+            <p class="name-store mt-0 mb-0" style="padding-left: 5px"><%= @product.present? ? @product.vehicle_make : "Motorist" %></p>
             <div class="quality-store">
                 <div class="quality-icon">
                     <img src="/assets/quality_store" alt="">

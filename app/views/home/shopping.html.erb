@@ -40,16 +40,20 @@
     </div>
   </div>
   <div class="products">
-    <div class="row pl-3 pr-3">
+    <div class="row ps-2 pe-2">
+      <% cache @new_products do  %>
       <% @new_products.first.each do |product| %>
         <div class='col-6'>
           <%= render partial: 'shopping/product', locals: {product: product} %>
         </div>
       <% end %>
+      <% end %>
+      <% cache @new_products do  %>
       <% @new_products.last.each do |product| %>
         <div class='col-6 mt-3 hide-prod-item d-none'>
           <%= render partial: 'shopping/product', locals: {product: product} %>
         </div>
+      <% end %>
       <% end %>
     </div>
   </div>
@@ -66,7 +70,7 @@
     </div>
   </div>
   <div class="products">
-    <div class="row pl-3 pr-3">
+    <div class="row ps-2 pe-2">
       <% @sale_products.first.each do |product| %>
         <div class='col-6'>
           <%= render partial: 'shopping/product', locals: {product: product} %>
@@ -123,7 +127,7 @@
   <div class="col-12 pt-5">
   </div>
   <div class="products">
-    <div class="row pl-3 pr-3">
+    <div class="row ps-2 pe-2">
       <% @sale_products.first.each do |product| %>
         <div class='col-6'>
           <%= render partial: 'shopping/product', locals: {product: product} %>

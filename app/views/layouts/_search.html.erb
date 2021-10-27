@@ -15,16 +15,15 @@
     <input type="text" value="<%= params[:keyword] %>" class="form-control" placeholder="Search" style="border-radius: 16px; height: 50px" name="keyword">
     <div class="filter-search" style="height: 100%; padding: 10px">
       <div class="icon">
-        <% if @search %>
-          <img src="/assets/filter_search_active" alt="" srcset="">
+        <% if params[:country].present? || params[:order].present? ||params[:vehicle_make].present? ||params[:color].present? %>
+          <img class="img-search-a" src="/assets/filter_search_active" alt="" srcset="">
         <% else %>
-          <img src="/assets/filter_search" alt="" srcset="">
+          <img class="img-search-b" src="/assets/filter_search" alt="" srcset="">
         <% end %>
       </div>
     </div>
   </div>
 </div>
-
 
 <div id="myModal" class="modal" tabindex="-1" role="dialog">
   <div class="modal-dialog modal-dialog-centered" role="document">
@@ -414,6 +413,9 @@
   $('select').change(function () {
     $(this).css('color', '#00BE65');
     $(this).css('border', '1px solid #00BE65');
+
+    $('.img-search-a').removeClass('d-none')
+    $('.img-search-b').addClass('d-none')
   })
 
   $(function() {

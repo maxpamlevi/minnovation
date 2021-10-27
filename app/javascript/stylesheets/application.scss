@@ -72,7 +72,7 @@ section {
         text-decoration: none;
       }
       .inside-item {
-        height: 96%;
+        height: 100%;
         background: #FFF;
         border-radius: 7px;
 
@@ -352,7 +352,7 @@ span {
           width: 40px;
           height: 5px;
           background: #00BE65;
-          border-radius: 2px;
+          //border-radius: 2px;
           top: 145%;
           left: 50%;
           transform: translateX(-50%);

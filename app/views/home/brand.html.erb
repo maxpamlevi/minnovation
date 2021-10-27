@@ -4,7 +4,7 @@
       <img src="<%= @product.logo_img %>" alt="" style="height: 50px" >
     </div>
     <div class="title-store pl-2 pr-2">
-      <p class="name-store mt-0 mb-0"><%= @product.vehicle_make %></p>
+      <p class="name-store mt-0 mb-0 ps-2"><%= @product.vehicle_make %></p>
       <div class="quality-store">
         <div class="quality-icon">
           <img src="/assets/quality_store" alt="">
@@ -75,7 +75,7 @@
     <%= render partial: 'layouts/search' %>
 
 
-    <div class="section-products row bg-white margin-top-20 py-4 position-relative pr-2 pl-2">
+    <div class="section-products row bg-white margin-top-20 py-4 position-relative ps-2 pe-2">
       <% @new_products.each do |product| %>
         <div class="col-6 pb-4">
           <%= render partial: 'shopping/product', locals: {product: product} %>
@@ -87,7 +87,7 @@
     <%= render partial: 'layouts/search' %>
 
 
-    <div class="section-products row bg-white margin-top-20 py-4 position-relative pr-2 pl-2">
+    <div class="section-products row bg-white margin-top-20 py-4 position-relative ps-2 pe-2">
       <% @sale_products.each do |product| %>
         <div class="col-6 pb-4">
           <%= render partial: 'shopping/product', locals: {product: product} %>
@@ -96,7 +96,7 @@
     </div>
   </div>
   <div class="tab-content" data-tab='3'>
-    <div class="summary-reviews">
+    <div class="summary-reviews pt-3">
       <p>4.5 / 5.0</p>
       <span></span>
       <div class="star-reviews">

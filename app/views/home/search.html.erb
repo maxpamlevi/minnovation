@@ -1,6 +1,4 @@
-<% content_for :title, "Shopping" %>
-
-
+<% content_for :title, "mMarket" %>
 <div class='banner'>
   <div id="carouselExampleIndicators" class="carousel slide banner" data-bs-ride="carousel">
     <div class="carousel-indicators">
@@ -34,7 +32,7 @@
 <%= render partial: 'layouts/search' %>
 <div class="section-products mt-4">
   <div class="products ">
-    <div class="row pl-3 pr-3">
+    <div class="row ps-2 pe-2">
       <% @products.each do |product| %>
         <div class='col-6 py-3'>
           <%= render partial: 'shopping/product', locals: {product: product} %>

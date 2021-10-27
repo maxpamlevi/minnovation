@@ -1,5 +1,16 @@
 @import "bootstrap";
 
+
+.nav-link{
+  transition: none !important;
+}
+
+input[type='text'],
+input[type='number'],
+textarea {
+  font-size: 16px;
+}
+
 * {
   font-family: Proxima Nova;
   font-style: normal;

@@ -10,8 +10,8 @@ class HomeController < ApplicationController
     def shopping
         @new_products = Product.where('thumbnail like "%drive%"').where(state: 0).limit(4).each_slice(2).to_a
         @sale_products = Product.where('thumbnail like "%drive%"').where('discount > 0').order(:created_at).limit(4).each_slice(2).to_a
-        @just_for_you_products = Product.where('thumbnail like "%drive%"').order('RAND()').limit(4)
-        @best_buy_product = Product.where('thumbnail like "%drive%"').order('RAND()').limit(3)
+        @just_for_you_products = Product.where('thumbnail like "%drive%"').limit(4)
+        @best_buy_product = Product.where('thumbnail like "%drive%"').limit(3)
 
         @make_data = Product.all.pluck(:vehicle_make).uniq
         @color_data = Product.all.pluck(:color).uniq
@@ -20,8 +20,8 @@ class HomeController < ApplicationController
     def brand
         @product = Product.where(vehicle_make: params[:brand]).first
 
-        @new_products = Product.where('thumbnail like "%drive%"').where(state: 0)
-        @sale_products = Product.where('thumbnail like "%drive%"').where('discount > 0').order(:created_at)
+        @new_products = Product.where('vehicle_make = ? ',params[:brand])
+        @sale_products = Product.where('vehicle_make = ? ',params[:brand]).order(:created_at)
 
         @make_data = Product.pluck(:vehicle_make).uniq
         @color_data = Product.pluck(:color).uniq
@@ -52,11 +52,14 @@ class HomeController < ApplicationController
         if params[:brand].present?
             @check = false
             @product = Product.where(vehicle_make: params[:brand]).first
+            @new_products = Product.where('vehicle_make = ? ',params[:brand])
+            @sale_products = Product.where('vehicle_make = ? ',params[:brand]).order(:created_at)
         else
+            @store = true
             @check = true
+            @new_products = Product.where('thumbnail like "%drive%"').where(state: 0)
+            @sale_products = Product.where('thumbnail like "%drive%"').where('discount > 0').order(:created_at)
         end
-        @new_products = Product.where('thumbnail like "%drive%"').where(state: 0)
-        @sale_products = Product.where('thumbnail like "%drive%"').where('discount > 0').order(:created_at)
 
         @make_data = Product.pluck(:vehicle_make).uniq
         @color_data = Product.pluck(:color).uniq

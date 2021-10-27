@@ -83,11 +83,13 @@
         <%= render partial: 'layouts/search' %>
 
 
-        <div class="section-products row bg-white margin-top-20 py-4 position-relative pr-2 pl-2">
+        <div class="section-products row bg-white margin-top-20 py-4 position-relative ps-2 pe-2">
+          <% cache @new_products do %>
           <% @new_products.each do |product| %>
             <div class="col-6 pb-4">
                 <%= render partial: 'shopping/product', locals: {product: product} %>
             </div>
+          <% end %>
           <% end %>
         </div>
     </div>
@@ -95,16 +97,18 @@
         <%= render partial: 'layouts/search' %>
 
 
-        <div class="section-products row bg-white margin-top-20 py-4 position-relative pr-2 pl-2">
+        <div class="section-products row bg-white margin-top-20 py-4 position-relative ps-2 pe-2">
+          <% cache @new_products do %>
           <% @sale_products.each do |product| %>
             <div class="col-6 pb-4">
                 <%= render partial: 'shopping/product', locals: {product: product} %>
             </div>
           <% end %>
+          <% end %>
         </div>
     </div>
     <div class="tab-content" data-tab='3'>
-        <div class="summary-reviews">
+        <div class="summary-reviews pt-3">
             <p>4.5 / 5.0</p>
             <span></span>
             <div class="star-reviews">

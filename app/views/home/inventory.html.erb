@@ -3,36 +3,11 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+<!--<link rel="stylesheet" type="text/css" href="https://releases.jquery.com/git/ui/jquery-ui-git.css" />-->
+<!--<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>-->
 
 <div class="vh-100 d-flex justify-content-center ">
-  <style>
-    .nav-tabs{
-      border: none !important;
-      background: #ED1C24 !important;
-      color: white;
-      font-size: 18px;
-    }
-    .nav-link.active{
-      background: #ED1C24 !important;
-      color: white !important;
-      font-weight: bold !important;
-      border: none;
-      font-size: 18px;
 
-    }
-    .nav-link.active::before{
-      position: absolute;
-      width: 46px;
-      content: '';
-      border-bottom: 3px solid white;
-      left: calc(50% - 23px);
-      top: 94%
-    }
-    .nav-tabs .nav-link{
-      color: white !important;
-      margin-bottom: unset !important;
-    }
-  </style>
   <div class="w-100">
     <nav>
       <div class="nav nav-tabs w-100" id="nav-tab" role="tablist" style="height: 44px">
@@ -43,7 +18,7 @@
     <div class="tab-content" id="nav-tabContent">
       <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
         <div class="d-flex justify-content-center flex-wrap" style="padding-top: 50px">
-        <div class="w-100 dsfsdf" style="background: url('/assets/img_2.png'); height: 453px; background-size: contain">
+        <div class="w-100 dsfsdf" style="background: url('/assets/img_2.png'); height: 453px; background-size: contain; background-repeat: no-repeat">
         </div>
         </div>
 
@@ -241,7 +216,7 @@
 </div>
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog p-1" role="document" style="top: calc(50% - 155px)">
+  <div class="modal-dialog p-1" role="document" style="top: calc(50% - 135px)">
     <div class="modal-content"  style="border-radius: 15px">
       <div class="modal-body p-0">
         <div class="d-flex justify-content-center flex-column align-items-center pb-4">
@@ -289,13 +264,56 @@
   })
 
   $(function() {
+    // $( 'input[name="birthday"]' ).datepicker();
     $('input[name="birthday"]').daterangepicker({
       singleDatePicker: true,
       showDropdowns: true,
       minYear: 1901,
+      opens:'center',
       maxYear: parseInt(moment().format('YYYY'),10)
     }, function(start, end, label) {
       // var years = moment().diff(start, 'years');
     });
   });
 </script>
+<style>
+  input{
+    font-size: 18px !important;
+  }
+  input:focus {
+    font-size: 18px;
+  }
+  .nav-link , .nav-link.active {
+    transition: none !important;
+    /*isolation: unset !important;*/
+    border: none !important;
+  }
+
+  .nav-tabs{
+    border: none !important;
+    background: #ED1C24 !important;
+    color: white;
+    font-size: 18px;
+  }
+  .nav-link.active{
+    background: #ED1C24 !important;
+    color: white !important;
+    font-weight: bold !important;
+    border: none;
+    font-size: 18px;
+
+  }
+  .nav-link.active::before{
+    position: absolute;
+    width: 46px;
+    content: '';
+    border-bottom: 3px solid white;
+    left: calc(50% - 23px);
+    top: 94%
+  }
+  .nav-tabs .nav-link{
+    color: white !important;
+    margin-bottom: unset !important;
+  }
+</style>
+

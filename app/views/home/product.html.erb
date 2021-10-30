@@ -107,10 +107,10 @@
 
 <div class="">
   <nav class="d-flex justify-content-center" style="background: #D686A3;border-top-left-radius:25px;border-top-right-radius:25px">
-    <div class="nav nav-tabs d-flex w-100 justify-content-around" id="nav-tab" role="tablist">
-      <div class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Spec</div>
-      <div class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Description</div>
-      <div class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Review</div>
+    <div class="nav nav-tabs d-flex w-100 justify-content-around align-items-center" id="nav-tab" role="tablist" style="height: 40px;">
+      <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Spec</button>
+      <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Description</button>
+      <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Review</button>
     </div>
   </nav>
   <div class="tab-content" id="nav-tabContent">
@@ -397,7 +397,6 @@
 
 <style>
   .nav-tabs {
-
     border: none !important;
   }
 
@@ -407,12 +406,32 @@
   }
 
   .nav-tabs .nav-link.active {
-    background: none;
-    border-top: none;
-    border-left: none;
-    border-right: none;
+    background: none !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
     color: white;
     font-weight: bold;
     border-bottom: 5px solid white;
+    -webkit-appearance: none;
+    border-radius: 0;
+  }
+
+  .nav-link.active{
+    /*background: #ED1C24 !important;*/
+    /*color: white !important;*/
+    /*font-weight: bold !important;*/
+    /*border: none;*/
+    /*font-size: 18px;*/
+    border-radius: 0 !important;
+
+  }
+  .nav-link.active::before{
+    position: absolute;
+    width: 46px;
+    content: '';
+    border-bottom: 3px solid white;
+    left: calc(50% - 23px);
+    top: 94%
   }
 </style>

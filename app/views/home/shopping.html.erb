@@ -48,12 +48,12 @@
         </div>
       <% end %>
       <% end %>
-      <% cache @new_products do  %>
+      <%# cache @new_products do  %>
       <% @new_products.last.each do |product| %>
         <div class='col-6 mt-3 hide-prod-item d-none'>
           <%= render partial: 'shopping/product', locals: {product: product} %>
         </div>
-      <% end %>
+      <%# end %>
       <% end %>
     </div>
   </div>

@@ -72,7 +72,6 @@
 
                 <select name="country" id="country" class="form-control my-2" style="border-radius: 10px">
                   <option value="">Country</option>
-
                 </select>
               </div>
             </div>
@@ -401,7 +400,13 @@
   ]
 
   arr.forEach(function (e){
-    $('#country').append("<option value="+e.name+">"+e.name+"</option>")
+    if (e.name == 'Singapore'){
+      $('#country').append("<option value="+e.name+" selected>"+e.name+"</option>")
+
+    }else{
+      $('#country').append("<option value="+e.name+">"+e.name+"</option>")
+
+    }
   })
 
   $('#close').click(function (){

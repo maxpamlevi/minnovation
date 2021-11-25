@@ -330,6 +330,11 @@
     $('.show1').trigger('click')
   })
 
+  $("#exampleModal").on("hidden.bs.modal", function () {
+    $('.show1').addClass('d-none')
+    $('.show2').removeClass('d-none')
+  });
+
   $(function() {
     // $( 'input[name="birthday"]' ).datepicker();
     $('input[name="birthday"]').daterangepicker({

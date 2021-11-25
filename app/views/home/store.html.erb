@@ -46,8 +46,12 @@
     </div>
 </div>
 
+<div class="search-block pt-3 d-none">
+  <%= render partial: 'layouts/search' %>
+</div>
+
 <div class="content-store">
-    <div class="tab-content pb-3 active" data-tab='0'>
+    <div class="tab-content pb-3 active" style="margin-top: 50px" data-tab='0'>
         <div class="top-absolute-action">About us</div>
         <div class="p-3">
             <p class="main-description p-2">
@@ -83,7 +87,7 @@
         </div>
     </div>
     <div class="tab-content bg" data-tab='1'>
-        <%= render partial: 'layouts/search' %>
+        <%#= render partial: 'layouts/search' %>
 
 
         <div class="section-products row bg-white margin-top-20 py-4 position-relative ps-2 pe-2">
@@ -97,7 +101,6 @@
         </div>
     </div>
     <div class="tab-content bg" data-tab='2'>
-        <%= render partial: 'layouts/search' %>
 
         <div class="section-products row bg-white margin-top-20 py-4 position-relative ps-2 pe-2">
           <%# cache @new_products do %>
@@ -109,7 +112,7 @@
           <%# end %>
         </div>
     </div>
-    <div class="tab-content" data-tab='3'>
+    <div class="tab-content" style="margin-top: 50px" data-tab='3'>
         <div class="summary-reviews pt-3">
             <p>4.5 / 5.0</p>
             <span></span>
@@ -327,5 +330,12 @@
                 $(content_tabs[idx]).addClass('active');
             }
         });
+        if (tab_idx == '1'|| tab_idx == '2'){
+          $('.search-block').removeClass('d-none')
+        }
+        else{
+          $('.search-block').addClass('d-none')
+
+        }
     });
 </script>

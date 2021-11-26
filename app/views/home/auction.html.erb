@@ -8,7 +8,7 @@
   <% @auctions.each do |auction| %>
     <% next if auction.product.thumbnail.blank? %>
     <div class="col-12 px-4 py-3">
-      <a href="item/<%= auction.product.id %>" style="text-decoration: none; color: unset">
+      <a href="/item/<%= auction.product.id %>" style="text-decoration: none; color: unset">
         <%= render partial: 'shopping/auction', locals: {product: auction.product, auction: auction} %>
       </a>
     </div>
